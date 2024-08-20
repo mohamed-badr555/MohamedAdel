@@ -144,7 +144,8 @@ JSEcreommece,
       iconBg: "#383E56",
       date: "Dec 2022 – Nov 2023",
       points: [
-        "front-end HTML,CSS,BOOTSTRAP,JS,JQaury,Reactjs",
+        "front-end HTML,CSS,BOOTSTRAP,JS,JQaury\
+        ,Reactjs",
         "Back-end SQL Server, C#,OOPC#,AdvancedC#  ,Linq,Entity Frame Work,MVC, Web API, Design Pattern, Agile",
           "Development of a new highly responsive, web-based user interface.",
           "Develop a flexible and well-structured project architecture and the APIs to support it.",
