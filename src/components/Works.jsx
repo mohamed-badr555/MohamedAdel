@@ -9,9 +9,9 @@ import { fadeIn,textVariant } from '../utils/motion';
 
 const ProjectCard =({index , name, description,tags,image,source_code_link}) =>{
   return (
-    <motion.div variants={fadeIn("up","spring",index*0.5,0.75)}>
+    <motion.div  variants={fadeIn("up","spring",index*0.5,0.75)}>
       <Tilt options={{max:45,scale:1,speed:450}} className="bg-tertiary p-5 
-      rounded-2xl sm:w-[360px] w-full ">
+      rounded-2xl sm:w-[360px] w-full h-full flex flex-col justify-between  ">
         <div className="relative w-full h-[230px] ">
           <img src={image} alt={name} className='w-full h-full object-cover rounded-2xl ' />
           <div className="absolute inset-0  flex justify-end m-3 card-img_hover ">
@@ -21,11 +21,11 @@ const ProjectCard =({index , name, description,tags,image,source_code_link}) =>{
             </div>
           </div>
         </div>
-        <div className="mt-5">
+        <div className="mt-5 flex-1 ">
           <h3 className='font-bold text-white text-[24px] '>{name}</h3>
           <p className='mt-2 text-secondary text-[14px] '>{description}</p>
         </div>
-        <div className="flex mt-4 flex-wrap gap-2">
+        <div className="flex mt-4 flex-wrap   gap-2">
           {tags.map((tag)=> (
             <p key={tag.name} className={`${tag.color} text-[14px] `} >#{tag.name}</p>
           ))}
