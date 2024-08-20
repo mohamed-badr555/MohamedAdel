@@ -133,7 +133,7 @@ JSEcreommece,
       iconBg: "#E6DEDD",
       date: "Jul 2024 – Aug 2024",
       points: [
-        "Learn HTML, CSS,JS,BOOSTRAP,HTML5,CSS3,Reactjs",
+        "Learn HTML5, CSS3,JS,BOOSTRAP,Reactjs",
           " Daily workshop ,E-commerce Final Project"
       ],
     },
@@ -144,7 +144,8 @@ JSEcreommece,
       iconBg: "#383E56",
       date: "Dec 2022 – Nov 2023",
       points: [
-        "The course covers front-end and Back-End tools HTML,CSS,BOOTSTRAP,JS,JQaury,Reactjs,SQL Server, C#,OOPC#,AdvancedC#,Linq,Entity Frame Work,MVC, Web API, Design Pattern, Agile",
+        "The course covers front-end  HTML,CSS,BOOTSTRAP,JS,JQaury,Reactjs",
+        "Front-end SQL Server, C#,OOPC#,AdvancedC#  ,Linq,Entity Frame Work,MVC, Web API, Design Pattern, Agile",
           "Development of a new highly responsive, web-based user interface.",
           "Develop a flexible and well-structured project architecture and the APIs to support it.",
           "Translate designs, wireframes, and business requirements into solutions using high-quality code. "
