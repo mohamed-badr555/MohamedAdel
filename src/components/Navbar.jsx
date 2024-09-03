@@ -5,6 +5,15 @@ import { Link } from 'react-router-dom'
 import { navLinks } from './../constants/index';
 import {  menu ,close } from '../assets';
 import logo from '../assets/logo.png'
+
+const scrollToSection = (id) => {
+  const section = document.getElementById(id);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
+
 const Navbar = () => {
   const [active, setActive] = useState('')
   const [toggle, setToggle] = useState(false)
@@ -20,16 +29,20 @@ const Navbar = () => {
         <img src={logo} alt="logo" className=' object-contain' style={{height:'36px' , width:'36px'}} />
         <p className='text-white text-[18px] font-bold cursor-pointer'>Mohamed Adel</p>
         </Link>
+        
         <ul className="list-none hidden items-center  md:flex  md:flex-row gap-10 ">
           {navLinks.map((link)=> (
             <li key={link.id} className={`${active == link.title ? "text-white" :"text-secondary"}
              hover:text-white text-[18] font-medium cursor-pointer `}
-             onClick={()=>setActive(link.title) }>
-              <a href={`#${link.id}`}>{link.title}</a>
+             onClick={()=>{
+              setActive(link.title) 
+              scrollToSection(link.id); // Scroll to the section
+             }}>
+               <span>{link.title}</span> {/* Remove <a href> */}
             </li>
           ))}
             <li className={`bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md cursor-pointer shadow-primary rounded-xl`}>
-  <a href="https://drive.google.com/uc?export=download&id=1DpIxYTbvs9bWtfagpPJTuy3aXcjba8VD" download>Download CV</a>
+  <a  href="https://drive.google.com/uc?export=download&id=1DpIxYTbvs9bWtfagpPJTuy3aXcjba8VD" download>Download CV</a>
 </li>
 
         </ul>
@@ -46,13 +59,23 @@ const Navbar = () => {
              font-poppins font-medium cursor-pointer text-[16px] `}
              onClick={()=>{
               setToggle(!toggle)
-              setActive(link.title) }}>
-              <Link to={`#${link.id}`}>{link.title}</Link>
+              setActive(link.title) 
+              scrollToSection(link.id);
+              }}>
+              {/* <Link to={`#${link.id}`}>{link.title}</Link> */}
+              <span>{link.title}</span> {/* Remove <Link to> */}
             </li>
           ))}
            <li className={`bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md cursor-pointer shadow-primary rounded-xl`}>
-  <Link to="https://drive.google.com/uc?export=download&id=1DpIxYTbvs9bWtfagpPJTuy3aXcjba8VD" download>Download CV</Link>
-</li>
+           <a
+      href="https://drive.google.com/uc?export=download&id=1DpIxYTbvs9bWtfagpPJTuy3aXcjba8VD"
+      target="_blank"
+      rel="noopener noreferrer"
+      download
+    >
+      Download CV
+    </a>
+    </li>
         </ul>
               </div>
         </div>

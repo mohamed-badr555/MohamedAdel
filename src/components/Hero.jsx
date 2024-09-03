@@ -3,6 +3,15 @@ import { useState } from 'react';
 import {styles} from '../styles'
 import { ComputersCanvas } from "./canvas";
 import { motion } from "framer-motion";
+import { Link } from 'react-router-dom';
+
+const scrollToSection = (id) => {
+  const section = document.getElementById(id);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
 
 const Hero = () => {
 
@@ -26,13 +35,17 @@ const Hero = () => {
           </p>
         </div>
       </div>
+    
+
       <ComputersCanvas />
-      <div className="absolute  xs:-bottom-9 -bottom-5 w-full
-       flex justify-center items-center z-10 ">
-        <a href="#about">
-          <div className="w-[35px]  h-[64px] rounded-3xl border-4
-           border-secondary flex justify-center items-start p-2   ">
-               <motion.div
+     
+      
+<div className="absolute  xs:-bottom-9 bottom-5 w-full flex justify-center items-center z-10">
+  <div
+    className="w-[28px] h-[50px] rounded-3xl border-4 border-secondary flex justify-center items-start p-1 cursor-pointer"
+    onClick={() => scrollToSection('about')}  
+  >
+    <motion.div
               animate={{
                 y: [0, 24, 0],
               }}
@@ -43,9 +56,11 @@ const Hero = () => {
               }}
               className='w-3 h-3 rounded-full bg-secondary mb-1'
             />
-           </div>
-        </a>
-      </div>
+  </div>
+</div> 
+
+
+
     </section>
   )
 }
