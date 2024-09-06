@@ -37,7 +37,7 @@ import { SectionWrapper } from "../hoc";
  }
 const About = () => {
   return (
-    <div className='mt-6'>
+    <div className='mt-2'>
          <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
