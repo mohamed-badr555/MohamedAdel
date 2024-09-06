@@ -37,9 +37,9 @@ const Hero = () => {
       </div>
     
 
-      <ComputersCanvas />
+      {/* <ComputersCanvas /> */}
      
-      
+{/*       
 <div className="absolute  xs:-bottom-9 bottom-5 w-full flex justify-center items-center z-10">
   <div
     className="w-[28px] h-[50px] rounded-3xl border-4 border-secondary flex justify-center items-start p-1 cursor-pointer"
@@ -57,7 +57,7 @@ const Hero = () => {
               className='w-3 h-3 rounded-full bg-secondary mb-1'
             />
   </div>
-</div> 
+</div>  */}
 
 
 
