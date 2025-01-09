@@ -3,21 +3,28 @@ import {motion} from 'framer-motion'
 import {styles} from '../styles'
 import { github } from '../assets';
 import {SectionWrapper} from '../hoc';
+import {liveDemo} from '../assets'
 import {projects} from '../constants'
 import { fadeIn,textVariant } from '../utils/motion';
+import { Link } from 'react-router-dom';
 
 
-const ProjectCard =({index , name, description,tags,image,source_code_link}) =>{
+const ProjectCard =({index , name, description,tags,image,source_code_link,LiveDemo}) =>{
   return (
     <div >
-      <div className="bg-tertiary p-5 
+     <div className="bg-tertiary p-5 
       rounded-2xl sm:w-[360px] w-full h-full flex flex-col justify-between  ">
+       
         <div className="relative w-full h-[230px] ">
           <img src={image} alt={name} className='w-full h-full object-cover rounded-2xl ' />
-          <div className="absolute inset-0  flex justify-end m-3 card-img_hover ">
-            <div className='black-gradient  w-10 h-10 rounded-full flex justify-center 
+          <div className="absolute inset-0  flex justify-end m-3  card-img_hover ">
+            <div className='black-gradient mx-3 w-10 h-10 rounded-full flex justify-center 
             items-center cursor-pointer ' onClick={ ()=> window.open(source_code_link,'_blank')}>
                 <img src={github} alt='github' className='w-1/2 h-1/2  object-contain ' />
+            </div>
+            <div className='black-gradient  w-10 h-10 rounded-full flex justify-center 
+            items-center cursor-pointer ' onClick={ ()=> window.open(LiveDemo,'_blank')}>
+                <img src={liveDemo} alt='github' className='w-1/2 h-1/2  object-contain ' />
             </div>
           </div>
         </div>

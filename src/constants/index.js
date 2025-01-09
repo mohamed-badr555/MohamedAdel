@@ -28,7 +28,9 @@ JSEcreommece,
     Route,
     ECPC,
     Bootstrap,
-    SQL
+    SQL,
+    hourefimage,
+
 
   } from "../assets";
   
@@ -50,6 +52,10 @@ JSEcreommece,
   const services = [
     {
       title: "Frontend Developer",
+      icon: web,
+    },
+    {
+      title: "Backend Developer",
       icon: web,
     },
     
@@ -193,6 +199,35 @@ JSEcreommece,
   ];
   
   const projects = [
+   {
+    name: "Horuf-Platform",
+    description:
+    "Hrouf Academy is a single-page application (SPA) developed with React, designed for managing and displaying Teachers in Teaching center called Hrouf Academy.\
+     It includes a search feature to help users find their desired Teachers.\
+",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Context",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Boostrap",
+        color: "pink-text-gradient",
+      },
+      
+        {
+          name:"Joi library",
+          color:"orange-text-gradient",
+        }
+    ],
+    image: hourefimage,
+    source_code_link: "https://github.com/mohamed-badr555/Horuf-Platform",
+  LiveDemo:"https://www.hrouf-academy.com/",
+   },
     {
       name: "Movie APP",
       description:
@@ -212,9 +247,11 @@ Tools: Reactjs, Redux,Context,Helmet,react-detect-offline, JS,Boostrap\
           name: "Boostrap",
           color: "pink-text-gradient",
         },
+  
       ],
       image: MovieAPP,
       source_code_link: "https://github.com/mohamed-badr555/MovieApp",
+      LiveDemo:"",
     },
     {
       name: "Ecommerce",
@@ -236,6 +273,7 @@ Tools: Reactjs, Redux,Context,Helmet,react-detect-offline, JS,Boostrap\
       ],
       image : itiEcommerce ,
       source_code_link: "https://github.com/mohamed-badr555/itifinalProject",
+      LiveDemo:"",
     },
     {
       name: "Weather App",
@@ -257,6 +295,7 @@ Tools: Reactjs, Redux,Context,Helmet,react-detect-offline, JS,Boostrap\
       ],
       image: weather,
       source_code_link: "https://github.com/mohamed-badr555/WeatherApp",
+      LiveDemo:"",
     },
     {
       name: "Create Quize",
@@ -278,6 +317,7 @@ Tools: Reactjs, Redux,Context,Helmet,react-detect-offline, JS,Boostrap\
       ],
       image: Quize ,
       source_code_link: "https://github.com/mohamed-badr555/CreateQuize",
+      LiveDemo:"",
     },
     {
       name: "Ecommerce",
@@ -299,6 +339,7 @@ Tools: Reactjs, Redux,Context,Helmet,react-detect-offline, JS,Boostrap\
       ],
       image: JSEcreommece ,
       source_code_link: "https://github.com/mohamed-badr555/commerce-website",
+      LiveDemo:"",
     },
   ];
   

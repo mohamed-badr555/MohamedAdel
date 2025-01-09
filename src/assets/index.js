@@ -35,7 +35,8 @@ import itiEcommerce from './Ecommerce.png'
 import weather from './WeatherApp.png'
 import Quize from './CreateQuize.png'
 import JSEcreommece from './JSEcommerce.png'
-
+import hourefimage from  "./Houref.png"
+import liveDemo from "./livedemo.png"
 export {
   logo,
   backend,
@@ -72,5 +73,7 @@ MovieAPP,
 itiEcommerce,
 weather,
 Quize,
-JSEcreommece
+JSEcreommece,
+hourefimage,
+liveDemo
 };
