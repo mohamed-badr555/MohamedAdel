@@ -42,8 +42,14 @@ const Navbar = () => {
             </li>
           ))}
             <li className={`bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md cursor-pointer shadow-primary rounded-xl`}>
-  <a  href="https://drive.google.com/file/d/1gv6i5nMAJA3GdRlJNB7fslt53rScMpLJ/view?usp=drive_link" download>Download CV</a>
-</li>
+              <a  
+                href="https://drive.google.com/file/d/1gv6i5nMAJA3GdRlJNB7fslt53rScMpLJ/view?usp=drive_link" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                Download CV
+              </a>
+            </li>
 
         </ul>
         <div className='md:hidden flex flex-1 justify-end items-center'>
@@ -53,7 +59,7 @@ const Navbar = () => {
               />
               <div className={`${!toggle ? 'hidden' : 'flex'} p-6 black-gradient 
               absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}>
-                     <ul className="list-none   flex justify-end items-start flex-col gap-4   ">
+                     <ul className="list-none flex justify-end items-start flex-col gap-4">
           {navLinks.map((link)=> (
             <li key={link.id} className={`${active == link.title ? "text-white" :"text-secondary"}
              font-poppins font-medium cursor-pointer text-[16px] `}
@@ -62,20 +68,18 @@ const Navbar = () => {
               setActive(link.title) 
               scrollToSection(link.id);
               }}>
-              {/* <Link to={`#${link.id}`}>{link.title}</Link> */}
-              <span>{link.title}</span> {/* Remove <Link to> */}
+              <span>{link.title}</span>
             </li>
           ))}
            <li className={`bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md cursor-pointer shadow-primary rounded-xl`}>
-           <a
-      href="https://drive.google.com/file/d/1gv6i5nMAJA3GdRlJNB7fslt53rScMpLJ/view?usp=drive_link"
-      target="_blank"
-      rel="noopener noreferrer"
-      download
-    >
-      Download CV
-    </a>
-    </li>
+             <a
+               href="https://drive.google.com/file/d/1gv6i5nMAJA3GdRlJNB7fslt53rScMpLJ/view?usp=drive_link"
+               target="_blank"
+               rel="noopener noreferrer"
+             >
+               Download CV
+             </a>
+           </li>
         </ul>
               </div>
         </div>
