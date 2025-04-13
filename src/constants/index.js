@@ -30,6 +30,11 @@ JSEcreommece,
     Bootstrap,
     SQL,
     hourefimage,
+    Huson,
+    summit,
+    Afro,
+    Alto,
+    APTF,
 
 
   } from "../assets";
@@ -210,137 +215,172 @@ JSEcreommece,
         name: "react",
         color: "blue-text-gradient",
       },
-      {
-        name: "Context",
+          {
+        name: "Bootstrap",
+        color: "green-text-gradient",
+      },
+     {
+        name: "Web API",
         color: "green-text-gradient",
       },
       {
-        name: "Boostrap",
+        name: "MVC",
         color: "pink-text-gradient",
       },
-      
-        {
-          name:"Joi library",
-          color:"orange-text-gradient",
-        }
+      {
+        name: "SQL",
+        color: "orange-text-gradient",
+      }
     ],
     image: hourefimage,
     source_code_link: "https://github.com/mohamed-badr555/Horuf-Platform",
-  LiveDemo:"https://www.hrouf-academy.com/",
+    LiveDemo:"https://www.hrouf-academy.com/",
    },
-    {
-      name: "Movie APP",
-      description:
-      "Movie website for showing trending movies, all movies, and Details Movie,Registertion,login,logout\
-Tools: Reactjs, Redux,Context,Helmet,react-detect-offline, JS,Boostrap\
-",
-      tags: [
-        {
-          name: "react",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "Context",
-          color: "green-text-gradient",
-        },
-        {
-          name: "Boostrap",
-          color: "pink-text-gradient",
-        },
-  
-      ],
-      image: MovieAPP,
-      source_code_link: "https://github.com/mohamed-badr555/MovieApp",
-      LiveDemo:"",
-    },
-    {
-      name: "Ecommerce",
-      description:
-        "Final Project at ITI I used Ractjs ,Joi, Bootstrap to make this website to add , remove , display , edit Products with Login,Register and Logout ",
-      tags: [
-        {
-          name: "react",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "Joi",
-          color: "green-text-gradient",
-        },
-        {
-          name: "Bootstrap",
-          color: "pink-text-gradient",
-        },
-      ],
-      image : itiEcommerce ,
-      source_code_link: "https://github.com/mohamed-badr555/itifinalProject",
-      LiveDemo:"",
-    },
-    {
-      name: "Weather App",
-      description:
-        "Developed a responsive weather application using JavaScript, HTML, CSS, and Bootstrap, featuring real-time weather updates via API integration.",
-      tags: [
-        {
-          name: "HTML",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "CSS",
-          color: "green-text-gradient",
-        },
-        {
-          name: "JS",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: weather,
-      source_code_link: "https://github.com/mohamed-badr555/WeatherApp",
-      LiveDemo:"",
-    },
-    {
-      name: "Create Quize",
-      description:
-          "Created an online quiz application with customizable options for the number of questions, difficulty level, and category using HTML, CSS, JavaScript, and Bootstrap. The app fetches quiz data from an API, ensuring a dynamic and engaging user experience.",        
-      tags: [
-        {
-          name: "HTML",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "CSS",
-          color: "green-text-gradient",
-        },
-        {
-          name: "JS",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: Quize ,
-      source_code_link: "https://github.com/mohamed-badr555/CreateQuize",
-      LiveDemo:"",
-    },
-    {
-      name: "Ecommerce",
-      description:
-        "Ecommerce Project: Developed an online shopping platform with intuitive user navigation and add to cart",
-      tags: [
-        {
-          name: "HTML",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "CSS",
-          color: "green-text-gradient",
-        },
-        {
-          name: "JS",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: JSEcreommece ,
-      source_code_link: "https://github.com/mohamed-badr555/commerce-website",
-      LiveDemo:"",
-    },
-  ];
+   {
+    name: "Hosoun Academy",
+    description: "A comprehensive educational platform offering modern learning experiences including recorded courses, live online classes, teaching jobs, educational articles, and digital book sales. Features secure payment gateway, teacher dashboard for course management, and admin panel for performance monitoring.",
+    tags: [
+      {
+        name: "React",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Bootstrap",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Web API",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "MVC",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "SQL",
+        color: "blue-text-gradient",
+      }
+    ],
+    image: Huson,
+    source_code_link: "https://github.com",
+    LiveDemo: "https://hosoun.com",
+   },
+   {
+    name: "Summit Egypt Real Estate",
+    description: "A comprehensive real estate platform for buying and renting properties in Egypt. Features modern UI, property management system, secure payment gateway for deposits, and integrated admin dashboard. Built with React frontend and ASP.NET Core backend for robust performance.",
+    tags: [
+      {
+        name: "React",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Bootstrap",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Web API",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "MVC",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "SQL",
+        color: "blue-text-gradient",
+      }
+    ],
+    image: summit,
+    source_code_link: "https://github.com",
+    LiveDemo: "https://www.summitegypt.com",
+   },
+   {
+    name: "AFROGrains Trading Platform",
+    description: "International trading platform for AFROGrains L.L.C, specializing in agricultural supplies, fertilizers, and industrial raw materials. Features innovative financial solutions and global trade connections, focusing on African markets since 1977.",
+    tags: [
+      {
+        name: "React",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Bootstrap",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Web API",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "MVC",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "SQL",
+        color: "blue-text-gradient",
+      }
+    ],
+    image: Afro,
+    source_code_link: "https://github.com",
+    LiveDemo: "https://afrograins.com",
+   },
+   {
+    name: "Alto Company Website",
+    description: "Interactive website for Alto, a supply chain analysis company. Features professional service showcase, business intelligence solutions, and global supplier network integration. Optimized for performance and user experience.",
+    tags: [
+      {
+        name: "React",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Bootstrap",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Web API",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "MVC",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "SQL",
+        color: "blue-text-gradient",
+      }
+    ],
+    image: Alto,
+    source_code_link: "https://github.com",
+    LiveDemo: "https://alto-ti.com",
+   },
+   {
+    name: "APTF Corporate Website",
+    description: "Bilingual corporate website for Arabian Plastic Technology Factory (APTF), showcasing their plastic manufacturing products and services. Features responsive design, detailed product catalogs, and optimized performance.",
+    tags: [
+      {
+        name: "React",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Bootstrap",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Web API",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "MVC",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "SQL",
+        color: "blue-text-gradient",
+      }
+    ],
+    image: APTF,
+    source_code_link: "https://github.com",
+    LiveDemo: "https://aptf.com.sa",
+   }
+];
   
   export { services, technologies, experiences, testimonials, projects };

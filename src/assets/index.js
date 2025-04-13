@@ -37,6 +37,11 @@ import Quize from './CreateQuize.png'
 import JSEcreommece from './JSEcommerce.png'
 import hourefimage from  "./Houref.png"
 import liveDemo from "./livedemo.png"
+import Huson from './huson.png'
+import summit from './SummitEgypt.png'
+import Afro from './afro.png'
+import Alto from './alto.png'
+import APTF from './apt.png'
 export {
   logo,
   backend,
@@ -75,5 +80,13 @@ weather,
 Quize,
 JSEcreommece,
 hourefimage,
-liveDemo
+liveDemo,
+
+Huson,
+summit,
+Afro,
+Alto,
+APTF
+
+
 };

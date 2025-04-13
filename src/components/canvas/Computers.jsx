@@ -21,8 +21,10 @@ const Computers = ({ isMobile }) => {
       <pointLight intensity={1} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.6 : 0.7}
-        position={isMobile ? [0, -3.75, -2.2] : [0, -4, -1.5]}
+        scale={isMobile ? 0.6 : 0.75}
+        position={isMobile 
+          ? [0, -3.75, -2.2] 
+          : [0, -3.25, -1.5]}
         rotation={[-0.01, -0.2, -0.1]}
       />
     </mesh>
@@ -31,25 +33,34 @@ const Computers = ({ isMobile }) => {
 
 const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   useEffect(() => {
-    // Add a listener for changes to the screen size
-    const mediaQuery = window.matchMedia("(max-width: 600px)");
+    // Add listeners for different screen sizes
+    const mobileQuery = window.matchMedia("(max-width: 500px)");
+    const tabletQuery = window.matchMedia("(max-width: 1000px)");
 
-    // Set the initial value of the `isMobile` state variable
-    setIsMobile(mediaQuery.matches);
+    // Set the initial values
+    setIsMobile(mobileQuery.matches);
+    setIsSmallScreen(tabletQuery.matches);
 
-    // Define a callback function to handle changes to the media query
-    const handleMediaQueryChange = (event) => {
+    // Define callback functions for changes
+    const handleMobileChange = (event) => {
       setIsMobile(event.matches);
     };
+    
+    const handleTabletChange = (event) => {
+      setIsSmallScreen(event.matches);
+    };
 
-    // Add the callback function as a listener for changes to the media query
-    mediaQuery.addEventListener("change", handleMediaQueryChange);
+    // Add the listeners
+    mobileQuery.addEventListener("change", handleMobileChange);
+    tabletQuery.addEventListener("change", handleTabletChange);
 
-    // Remove the listener when the component is unmounted
+    // Cleanup
     return () => {
-      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+      mobileQuery.removeEventListener("change", handleMobileChange);
+      tabletQuery.removeEventListener("change", handleTabletChange);
     };
   }, []);
 
@@ -58,7 +69,10 @@ const ComputersCanvas = () => {
       frameloop='demand'
       shadows
       dpr={[1, 2]}
-      camera={{ position: [20, 3, 5], fov: 25 }}
+      camera={{ 
+        position: [20, 3, 5], 
+        fov: isMobile ? 30 : isSmallScreen ? 25 : 22 
+      }}
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>

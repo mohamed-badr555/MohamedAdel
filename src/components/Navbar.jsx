@@ -42,7 +42,7 @@ const Navbar = () => {
             </li>
           ))}
             <li className={`bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md cursor-pointer shadow-primary rounded-xl`}>
-  <a  href="https://drive.google.com/uc?export=download&id=1DpIxYTbvs9bWtfagpPJTuy3aXcjba8VD" download>Download CV</a>
+  <a  href="https://drive.google.com/file/d/1gv6i5nMAJA3GdRlJNB7fslt53rScMpLJ/view?usp=drive_link" download>Download CV</a>
 </li>
 
         </ul>
@@ -68,7 +68,7 @@ const Navbar = () => {
           ))}
            <li className={`bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md cursor-pointer shadow-primary rounded-xl`}>
            <a
-      href="https://drive.google.com/uc?export=download&id=1DpIxYTbvs9bWtfagpPJTuy3aXcjba8VD"
+      href="https://drive.google.com/file/d/1gv6i5nMAJA3GdRlJNB7fslt53rScMpLJ/view?usp=drive_link"
       target="_blank"
       rel="noopener noreferrer"
       download

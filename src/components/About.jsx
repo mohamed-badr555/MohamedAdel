@@ -44,8 +44,9 @@ const About = () => {
       </motion.div>
       <motion.p variants={fadeIn("","",0.1,1)} className="mt-4 text-secondary text-[17px] 
       max-w-3xl leading-[30px] ">
-      Front-End Developer with extensive experience in developing responsive web interfaces
-      through companies, courses, internships, and personal projects. Skilled in bridging the gap between design and development, and eager to contribute to a professional, collaborative team
+   Innovative Full-Stack Developer specializing in React.js, Next.js, and .NET technologies. Passionate about building high-performance,
+    SEO-friendly applications with a focus on user experience. Proven expertise in e-commerce, educational platforms, and scalable web solutions.
+     Adept at both frontend and back-end development, ensuring seamless integration and optimized functionality.
       </motion.p>
       <div className="mt-20 flex justify-center flex-wrap gap-10  ">
         {services.map((service,index) => (
