@@ -31,7 +31,7 @@ const Computers = ({ isMobile }) => {
   );
 };
 
-const ComputersCanvas = () => {
+const ComputersCanvas = ({ onLoad }) => {
   const [isMobile, setIsMobile] = useState(false);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
@@ -64,6 +64,13 @@ const ComputersCanvas = () => {
     };
   }, []);
 
+  // Handle when the canvas is ready
+  const handleCanvasCreated = () => {
+    if (onLoad) {
+      onLoad();
+    }
+  };
+
   return (
     <Canvas
       frameloop='demand'
@@ -74,8 +81,9 @@ const ComputersCanvas = () => {
         fov: isMobile ? 30 : isSmallScreen ? 25 : 22 
       }}
       gl={{ preserveDrawingBuffer: true }}
+      onCreated={handleCanvasCreated}
     >
-      <Suspense fallback={<CanvasLoader />}>
+      <Suspense>
         <OrbitControls
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}

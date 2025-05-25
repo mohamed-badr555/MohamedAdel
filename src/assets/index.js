@@ -42,6 +42,7 @@ import summit from './SummitEgypt.png'
 import Afro from './afro.png'
 import Alto from './alto.png'
 import APTF from './apt.png'
+import IZITechs from "./company/IZITechs.svg"
 export {
   logo,
   backend,
@@ -69,6 +70,7 @@ export {
   jobit,
   tripguide,
   codeAlpha,
+  IZITechs,
 ITI,
 Route,
 ECPC,

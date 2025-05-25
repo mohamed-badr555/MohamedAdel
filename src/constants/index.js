@@ -35,6 +35,7 @@ JSEcreommece,
     Afro,
     Alto,
     APTF,
+    IZITechs,
 
 
   } from "../assets";
@@ -124,6 +125,19 @@ JSEcreommece,
   ];
   
   const experiences = [
+    {
+      title: "Frontend Developer",
+      company_name: "IZI Techs",
+      icon: IZITechs,
+      iconBg: "#383E56",
+      date: "NOV 2024 - Present",
+      points: [
+        "Created SEO-friendly, responsive applications with 30% improvement in user engagement metrics.",
+        "Implemented performance optimizations resulting in 40% faster page load times across all company applications.",
+        "Engineered pixel-perfect designs using React.js and Tailwind CSS, achieving 98% design-to-implementation accuracy.",
+        "Collaborated with UX/UI teams to develop accessible interfaces compliant with WCAG 2.1 standards.",
+      ],
+    },
     {
       title: "Frontend Intern",
       company_name: "CodeAlpha",
