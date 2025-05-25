@@ -21,4 +21,5 @@ module.exports = {
     ],
     'react/prop-types': 'off', // Disable prop-types validation (if not using TypeScript)
   },
+  
 };

@@ -3,7 +3,7 @@ import { defineConfig } from "file:///D:/Projects/Portfolio/node_modules/vite/di
 import react from "file:///D:/Projects/Portfolio/node_modules/@vitejs/plugin-react/dist/index.mjs";
 var vite_config_default = defineConfig({
   plugins: [react()],
-  base: "/MohamedAdel/"
+  base:process.env.Vite_Base_Path || "/MohamedAdel/"
 });
 export {
   vite_config_default as default
