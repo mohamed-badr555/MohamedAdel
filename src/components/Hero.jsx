@@ -47,7 +47,7 @@ const Hero = () => {
     // Give a small delay after canvas loads to ensure smooth transition
     setTimeout(() => {
       setIsLoading(false);
-    }, 500);
+    }, 100);
   };
 
   return (
