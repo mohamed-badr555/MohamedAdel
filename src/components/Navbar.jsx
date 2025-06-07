@@ -43,7 +43,7 @@ const Navbar = () => {
           ))}
             <li className={`bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md cursor-pointer shadow-primary rounded-xl`}>
               <a  
-                href="https://drive.google.com/file/d/1gv6i5nMAJA3GdRlJNB7fslt53rScMpLJ/view?usp=drive_link" 
+                href="https://drive.google.com/file/d/1KaWAI1k9p_szsgzUAiR1SjsQ_aEQFvJX/view?usp=sharing" 
                 target="_blank" 
                 rel="noopener noreferrer"
               >
@@ -73,7 +73,7 @@ const Navbar = () => {
           ))}
            <li className={`bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md cursor-pointer shadow-primary rounded-xl`}>
              <a
-               href="https://drive.google.com/file/d/1gv6i5nMAJA3GdRlJNB7fslt53rScMpLJ/view?usp=drive_link"
+               href="https://drive.google.com/file/d/1KaWAI1k9p_szsgzUAiR1SjsQ_aEQFvJX/view?usp=sharing"
                target="_blank"
                rel="noopener noreferrer"
              >
