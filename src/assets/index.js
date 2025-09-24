@@ -43,6 +43,7 @@ import Afro from './afro.png'
 import Alto from './alto.png'
 import APTF from './apt.png'
 import IZITechs from "./company/IZITechs.svg"
+import MindScope from "./mind-scope.png"
 export {
   logo,
   backend,
@@ -88,7 +89,7 @@ Huson,
 summit,
 Afro,
 Alto,
-APTF
-
+APTF,
+MindScope
 
 };

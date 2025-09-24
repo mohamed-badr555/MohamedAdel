@@ -36,7 +36,7 @@ JSEcreommece,
     Alto,
     APTF,
     IZITechs,
-
+MindScope
 
   } from "../assets";
   
@@ -218,6 +218,39 @@ JSEcreommece,
   ];
   
   const projects = [
+   {
+    name: "Mind-Scope",
+    description:
+    "Developed a comprehensive AI assistant platform with multilingual support (English & Arabic) and RTL layout capabilities\
+Implemented multiple AI generation tools including text chat, code generation, email composition, and AI image creation\
+Built responsive UI with custom theme switching between light/dark modes with consistent styling across components\
+",
+    tags: [
+      {
+        name: "next.js",
+        color: "blue-text-gradient",
+      },
+          {
+        name: "tailwindCSS",
+        color: "green-text-gradient",
+      },
+     {
+        name: "i18next",
+        color: "green-text-gradient",
+      },
+      {
+        name: "sal.js",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "sweetalert2",
+        color: "orange-text-gradient",
+      }
+    ],
+    image: MindScope,
+    source_code_link: "https://github.com/mohamed-badr555",
+    LiveDemo:"https://mind-scope.ae/",
+   },
    {
     name: "Horuf-Platform",
     description:
