@@ -250,6 +250,7 @@ Built responsive UI with custom theme switching between light/dark modes with co
     image: MindScope,
     source_code_link: "https://github.com/mohamed-badr555",
     LiveDemo:"https://mind-scope.ae/",
+    
    },
    {
     name: "Horuf-Platform",
