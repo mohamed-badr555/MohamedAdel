@@ -39,7 +39,8 @@ JSEcreommece,
 MindScope,
 Arkan,
 Sadad,
-Elshams
+Elshams,
+InnoCode
   } from "../assets";
   
   export const navLinks = [
@@ -129,10 +130,22 @@ Elshams
   const experiences = [
     {
       title: "Frontend Developer",
+      company_name: "Inno Code",
+      icon: InnoCode,
+      iconBg: "#383E56",
+      date: "Feb 2025 – Present",
+      points: [
+        "Building modern SaaS applications in AI, e-commerce, and internal ERP tools using React and Next.js.",
+       "Contributed to UI consistency and reusable components using TypeScript and Tailwind CSS",
+       "Worked closely with Product, UX, and AI teams to deliver scalable, performant frontend systems"
+      ],
+    },
+    {
+      title: "Frontend Developer",
       company_name: "IZI Techs",
       icon: IZITechs,
       iconBg: "#383E56",
-      date: "NOV 2024 - Present",
+      date: "Mar 2024 – Jan 2025",
       points: [
         "Created SEO-friendly, responsive applications with 30% improvement in user engagement metrics.",
         "Implemented performance optimizations resulting in 40% faster page load times across all company applications.",

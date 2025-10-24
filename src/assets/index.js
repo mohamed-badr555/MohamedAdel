@@ -22,7 +22,7 @@ import threejs from "./tech/threejs.svg";
 import Bootstrap from './tech/Boostrap.png'
 import SQL from './tech/SQL.png'
 
-
+import InnoCode from "./company/innocode.png"
 import codeAlpha from './company/CodeAlpha .png'
 import  ITI from  './company/iti.png'
 import Route from './company/Route.png';
@@ -87,7 +87,7 @@ Quize,
 JSEcreommece,
 hourefimage,
 liveDemo,
-
+InnoCode,
 Huson,
 summit,
 Afro,
