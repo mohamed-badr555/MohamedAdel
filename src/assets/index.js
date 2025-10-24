@@ -44,6 +44,9 @@ import Alto from './alto.png'
 import APTF from './apt.png'
 import IZITechs from "./company/IZITechs.svg"
 import MindScope from "./mind-scope.png"
+import Arkan from "./arkan.png"
+import Sadad from "./sadad.png"
+import Elshams from "./elshams.png"
 export {
   logo,
   backend,
@@ -90,6 +93,8 @@ summit,
 Afro,
 Alto,
 APTF,
-MindScope
-
+MindScope,
+Arkan,
+Sadad,
+Elshams
 };

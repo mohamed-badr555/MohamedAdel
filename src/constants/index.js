@@ -36,8 +36,10 @@ JSEcreommece,
     Alto,
     APTF,
     IZITechs,
-MindScope
-
+MindScope,
+Arkan,
+Sadad,
+Elshams
   } from "../assets";
   
   export const navLinks = [
@@ -313,6 +315,83 @@ Built responsive UI with custom theme switching between light/dark modes with co
     source_code_link: "https://github.com",
     LiveDemo: "https://hosoun.com",
    },
+   {
+    name: "Arkan Dental Clinic Website & Dashboard",
+    description: "Developed bilingual dental clinic website & CMS dashboard using Next.js, TypeScript and RESTful integration. Built comprehensive content management system with TypeScript-based API integration for secure. Implemented responsive UI with internationalization support, dynamic image optimization.",
+    tags: [
+      {
+        name: "Next.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "TailwindCSS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "i18n",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Context",
+        color: "orange-text-gradient",
+      }
+    ],
+    image: Arkan,
+    source_code_link: "https://github.com/mohamed-badr555",
+    LiveDemo: "https://arkandental.com",
+   },
+   {
+    name: "Sadad Financial Services Platform",
+    description: "Engineered a Next.js financial platform with app router architecture for Arabic loan payment services with dynamic routing Implemented RTL-optimized UI using Tailwind CSS with animated components via Framer Motion for seamless user experience Built content-driven system with dynamic article rendering category-based navigation and custom search functionality",
+    tags: [
+      {
+        name: "Next.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "TailwindCSS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Framer-Motion",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Context",
+        color: "orange-text-gradient",
+      }
+    ],
+    image: Sadad,
+    source_code_link: "https://github.com/mohamed-badr555",
+    LiveDemo: "https://saddadqrod.com",
+   },
+
+{
+    name: "Elshams Platform & CMS Dashboard",
+    description:"Engineered bilingual construction portfolio platform with Next.js App Router and TypeScript. Developed comprehensive dashboard for content management enabling dynamic project showcases, client testimonials, and multimedia galleries. Implemented responsive UI with internationalization (AR/EN), lazy-loaded YouTube integration, optimized image handling, and animated components using Framer Motion for enhanced user engagement.",
+    tags: [
+      {
+        name: "Next.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "TailwindCSS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "i18n",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Context",
+        color: "orange-text-gradient",
+      }
+    ],
+    image: Elshams,
+    source_code_link: "https://github.com/mohamed-badr555",
+    LiveDemo: "https://shamsfinishing.com",
+   },
+
    {
     name: "Summit Egypt Real Estate",
     description: "A comprehensive real estate platform for buying and renting properties in Egypt. Features modern UI, property management system, secure payment gateway for deposits, and integrated admin dashboard. Built with React frontend and ASP.NET Core backend for robust performance.",
