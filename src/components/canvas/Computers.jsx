@@ -34,76 +34,44 @@ const Computers = ({ isMobile }) => {
 const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
-  const [hasError, setHasError] = useState(false);
 
   useEffect(() => {
-    // Add listeners for different screen sizes
     const mobileQuery = window.matchMedia("(max-width: 500px)");
     const tabletQuery = window.matchMedia("(max-width: 1000px)");
 
-    // Set the initial values
     setIsMobile(mobileQuery.matches);
     setIsSmallScreen(tabletQuery.matches);
 
-    // Define callback functions for changes
-    const handleMobileChange = (event) => {
-      setIsMobile(event.matches);
-    };
-    
-    const handleTabletChange = (event) => {
-      setIsSmallScreen(event.matches);
-    };
+    const handleMobileChange = (event) => setIsMobile(event.matches);
+    const handleTabletChange = (event) => setIsSmallScreen(event.matches);
 
-    // Add the listeners
     mobileQuery.addEventListener("change", handleMobileChange);
     tabletQuery.addEventListener("change", handleTabletChange);
 
-    // Check if WebGL is supported
-    try {
-      const canvas = document.createElement('canvas');
-      const gl = canvas.getContext('webgl2') || canvas.getContext('webgl');
-      if (!gl) {
-        setHasError(true);
-      }
-    } catch (e) {
-      setHasError(true);
-    }
-
-    // Cleanup
     return () => {
       mobileQuery.removeEventListener("change", handleMobileChange);
       tabletQuery.removeEventListener("change", handleTabletChange);
     };
   }, []);
 
-  // Fallback if WebGL is not supported or canvas fails
-  if (hasError) {
-    return (
-      <div className="w-full h-full flex items-center justify-center">
-        <div className="text-center p-8">
-          <h3 className="text-white text-xl font-bold">💻</h3>
-        </div>
-      </div>
-    );
+  // Skip heavy 3D canvas on mobile — it crashes and shows white screen
+  if (isMobile) {
+    return null;
   }
 
   return (
     <Canvas
       frameloop='demand'
-      shadows={!isMobile}
-      dpr={isMobile ? [1, 1] : [1, 2]}
+      shadows
+      dpr={[1, 2]}
       camera={{ 
         position: [20, 3, 5], 
-        fov: isMobile ? 35 : isSmallScreen ? 25 : 22 
+        fov: isSmallScreen ? 25 : 22 
       }}
       gl={{ 
         preserveDrawingBuffer: true,
-        powerPreference: isMobile ? "low-power" : "high-performance",
-        antialias: !isMobile,
-        failIfMajorPerformanceCaveat: false,
+        powerPreference: "high-performance",
       }}
-      style={{ background: 'transparent' }}
-      onError={() => setHasError(true)}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
@@ -111,7 +79,7 @@ const ComputersCanvas = () => {
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        <Computers isMobile={isMobile} />
+        <Computers isMobile={false} />
       </Suspense>
 
       <Preload all />
