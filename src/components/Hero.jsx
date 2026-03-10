@@ -1,55 +1,15 @@
-import { useState, useEffect } from 'react';
 import {styles} from '../styles'
-// import { ComputersCanvas } from "./canvas";
+import { ComputersCanvas } from "./canvas";
 import { motion } from "framer-motion";
 
-// const scrollToSection = (id) => {
-//   const section = document.getElementById(id);
-//   if (section) {
-//     section.scrollIntoView({ behavior: 'smooth' });
-//   }
-// };
+const scrollToSection = (id) => {
+  const section = document.getElementById(id);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth' });
+  }
+};
 
 const Hero = () => {
-  // const [isMobile, setIsMobile] = useState(false);
-  // const [isLoading, setIsLoading] = useState(true);
-  // const [canvasLoaded, setCanvasLoaded] = useState(false);
-
-  // // Detect if the device is mobile
-  // useEffect(() => {
-  //   // Check if device is mobile
-  //   const mediaQuery = window.matchMedia('(max-width: 768px)');
-  //   setIsMobile(mediaQuery.matches);
-
-  //   // Add listener for changes
-  //   const handleMediaQueryChange = (event) => {
-  //     setIsMobile(event.matches);
-  //   };
-
-  //   mediaQuery.addEventListener('change', handleMediaQueryChange);
-
-  //   // Set minimum loading time
-  //   const minLoadTimer = setTimeout(() => {
-  //     if (canvasLoaded) {
-  //       setIsLoading(false);
-  //     }
-  //   }, isMobile ? 2000 : 1000);
-
-  //   return () => {
-  //     mediaQuery.removeEventListener('change', handleMediaQueryChange);
-  //     clearTimeout(minLoadTimer);
-  //   };
-  // }, [isMobile, canvasLoaded]);
-
-  // // Handle canvas load completion
-  // const handleCanvasLoad = () => {
-  //   setCanvasLoaded(true);
-  //   // Give a small delay after canvas loads to ensure smooth transition
-  //   setTimeout(() => {
-  //     setIsLoading(false);
-  //   }, 100);
-  // };
-
   return (
     <section className="relative w-full h-screen mx-auto">
       <div
@@ -71,20 +31,9 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* ComputersCanvas with onLoad callback */}
-      {/* <ComputersCanvas onLoad={handleCanvasLoad} /> */}
+      <ComputersCanvas />
       
-      {/* Show loading state only in Hero */}
-      {/* {isLoading && (
-        <div className="absolute inset-0 bg-primary flex justify-center items-center z-20">
-          <div className="text-center">
-            <div className="w-16 h-16 border-4 border-t-[#915EFF] border-gray-600 rounded-full animate-spin mx-auto mb-4"></div>
-            <p className="text-white text-lg">Welcome! Preparing your experience...</p>
-          </div>
-        </div>
-      )} */}
-      
-      {/* <div className="absolute xs:bottom-0 bottom-0 w-full flex justify-center items-center z-10">
+      <div className="absolute xs:bottom-0 bottom-0 w-full flex justify-center items-center z-10">
         <div
           className="w-[35px] h-[64px] md:w-[40px] md:h-[70px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2 cursor-pointer mb-2"
           onClick={() => scrollToSection('about')}  
@@ -103,7 +52,7 @@ const Hero = () => {
         </div>
 
         
-      </div> */}
+      </div>
     </section>
   )
 }
