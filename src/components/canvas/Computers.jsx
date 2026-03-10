@@ -15,15 +15,15 @@ const Computers = ({ isMobile }) => {
         angle={0.12}
         penumbra={1}
         intensity={1}
-        castShadow
-        shadow-mapSize={1024}
+        castShadow={!isMobile}
+        shadow-mapSize={isMobile ? 512 : 1024}
       />
       <pointLight intensity={1} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.6 : 0.75}
+        scale={isMobile ? 0.5 : 0.75}
         position={isMobile 
-          ? [0, -3.75, -2.2] 
+          ? [0, -3, -2.2] 
           : [0, -3.25, -1.5]}
         rotation={[-0.01, -0.2, -0.1]}
       />
@@ -31,9 +31,10 @@ const Computers = ({ isMobile }) => {
   );
 };
 
-const ComputersCanvas = ({ onLoad }) => {
+const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const [hasError, setHasError] = useState(false);
 
   useEffect(() => {
     // Add listeners for different screen sizes
@@ -57,6 +58,17 @@ const ComputersCanvas = ({ onLoad }) => {
     mobileQuery.addEventListener("change", handleMobileChange);
     tabletQuery.addEventListener("change", handleTabletChange);
 
+    // Check if WebGL is supported
+    try {
+      const canvas = document.createElement('canvas');
+      const gl = canvas.getContext('webgl2') || canvas.getContext('webgl');
+      if (!gl) {
+        setHasError(true);
+      }
+    } catch (e) {
+      setHasError(true);
+    }
+
     // Cleanup
     return () => {
       mobileQuery.removeEventListener("change", handleMobileChange);
@@ -64,26 +76,36 @@ const ComputersCanvas = ({ onLoad }) => {
     };
   }, []);
 
-  // Handle when the canvas is ready
-  const handleCanvasCreated = () => {
-    if (onLoad) {
-      onLoad();
-    }
-  };
+  // Fallback if WebGL is not supported or canvas fails
+  if (hasError) {
+    return (
+      <div className="w-full h-full flex items-center justify-center">
+        <div className="text-center p-8">
+          <h3 className="text-white text-xl font-bold">💻</h3>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <Canvas
       frameloop='demand'
-      shadows
-      dpr={[1, 2]}
+      shadows={!isMobile}
+      dpr={isMobile ? [1, 1] : [1, 2]}
       camera={{ 
         position: [20, 3, 5], 
-        fov: isMobile ? 30 : isSmallScreen ? 25 : 22 
+        fov: isMobile ? 35 : isSmallScreen ? 25 : 22 
       }}
-      gl={{ preserveDrawingBuffer: true }}
-      onCreated={handleCanvasCreated}
+      gl={{ 
+        preserveDrawingBuffer: true,
+        powerPreference: isMobile ? "low-power" : "high-performance",
+        antialias: !isMobile,
+        failIfMajorPerformanceCaveat: false,
+      }}
+      style={{ background: 'transparent' }}
+      onError={() => setHasError(true)}
     >
-      <Suspense>
+      <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
