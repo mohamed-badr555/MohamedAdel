@@ -266,6 +266,7 @@ Built responsive UI with custom theme switching between light/dark modes with co
     source_code_link: "https://github.com/mohamed-badr555",
     LiveDemo:"https://mind-scope.ae/",
     category: "fullstack",
+    isPrivate: true,
    },
    {
     name: "Horuf-Platform",
@@ -299,6 +300,7 @@ Built responsive UI with custom theme switching between light/dark modes with co
     source_code_link: "https://github.com/mohamed-badr555/Horuf-Platform",
     LiveDemo:"https://www.hrouf-academy.com/",
     category: "fullstack",
+    isPrivate: false,
    },
    {
     name: "Hosoun Academy",
@@ -329,6 +331,7 @@ Built responsive UI with custom theme switching between light/dark modes with co
     source_code_link: "https://github.com",
     LiveDemo: "https://hosoun.com",
     category: "fullstack",
+    isPrivate: true,
    },
    {
     name: "Arkan Dental Clinic Website & Dashboard",
@@ -355,6 +358,7 @@ Built responsive UI with custom theme switching between light/dark modes with co
     source_code_link: "https://github.com/mohamed-badr555",
     LiveDemo: "https://arkandental.com",
     category: "frontend",
+    isPrivate: true,
    },
    {
     name: "Sadad Financial Services Platform",
@@ -381,6 +385,7 @@ Built responsive UI with custom theme switching between light/dark modes with co
     source_code_link: "https://github.com/mohamed-badr555",
     LiveDemo: "https://saddadqrod.com",
     category: "frontend",
+    isPrivate: true,
    },
 
 {
@@ -408,6 +413,7 @@ Built responsive UI with custom theme switching between light/dark modes with co
     source_code_link: "https://github.com/mohamed-badr555",
     LiveDemo: "https://shamsfinishing.com",
     category: "frontend",
+    isPrivate: true,
    },
 
    {
@@ -439,6 +445,7 @@ Built responsive UI with custom theme switching between light/dark modes with co
     source_code_link: "https://github.com",
     LiveDemo: "https://www.summitegypt.com",
     category: "fullstack",
+    isPrivate: true,
    },
    {
     name: "AFROGrains Trading Platform",
@@ -469,6 +476,7 @@ Built responsive UI with custom theme switching between light/dark modes with co
     source_code_link: "https://github.com",
     LiveDemo: "https://afrograins.com",
     category: "fullstack",
+    isPrivate: true,
    },
    {
     name: "Alto Company Website",
@@ -499,6 +507,7 @@ Built responsive UI with custom theme switching between light/dark modes with co
     source_code_link: "https://github.com",
     LiveDemo: "https://alto-ti.com",
     category: "fullstack",
+    isPrivate: true,
    },
    {
     name: "APTF Corporate Website",
@@ -529,6 +538,7 @@ Built responsive UI with custom theme switching between light/dark modes with co
     source_code_link: "https://github.com",
     LiveDemo: "https://aptf.com.sa",
     category: "fullstack",
+    isPrivate: true,
    }
 ];
   
