@@ -11,11 +11,10 @@ const scrollToSection = (id) => {
 };
 
 const Hero = () => {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(() => window.matchMedia('(max-width: 640px)').matches);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia('(max-width: 640px)');
-    setIsMobile(mediaQuery.matches);
     const handler = (e) => setIsMobile(e.matches);
     mediaQuery.addEventListener('change', handler);
     return () => mediaQuery.removeEventListener('change', handler);
@@ -158,7 +157,7 @@ const Hero = () => {
         </div>
       )}
       
-      <div className="absolute xs:bottom-0 bottom-0 w-full flex justify-center items-center z-10">
+    {!isMobile && ( <div className="absolute xs:bottom-0 bottom-0 w-full flex justify-center items-center z-10">
         <div
           className="w-[35px] h-[64px] md:w-[40px] md:h-[70px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2 cursor-pointer mb-2"
           onClick={() => scrollToSection('about')}  
@@ -177,7 +176,8 @@ const Hero = () => {
         </div>
 
         
-      </div>
+      </div>)
+      }
     </section>
   )
 }
