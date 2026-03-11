@@ -133,7 +133,7 @@ InnoCode
       company_name: "Inno Code",
       icon: InnoCode,
       iconBg: "#383E56",
-      date: "Feb 2025 – Present",
+      date: "Jan 2025 – Aug 2025",
       points: [
         "Building modern SaaS applications in AI, e-commerce, and internal ERP tools using React and Next.js.",
        "Contributed to UI consistency and reusable components using TypeScript and Tailwind CSS",
@@ -144,8 +144,8 @@ InnoCode
       title: "Frontend Developer",
       company_name: "IZI Techs",
       icon: IZITechs,
-      iconBg: "#383E56",
-      date: "Mar 2024 – Jan 2025",
+      iconBg: "#E6DEDD",
+      date: "Jan 2024 – Jul 2025",
       points: [
         "Created SEO-friendly, responsive applications with 30% improvement in user engagement metrics.",
         "Implemented performance optimizations resulting in 40% faster page load times across all company applications.",
@@ -265,7 +265,7 @@ Built responsive UI with custom theme switching between light/dark modes with co
     image: MindScope,
     source_code_link: "https://github.com/mohamed-badr555",
     LiveDemo:"https://mind-scope.ae/",
-    
+    category: "fullstack",
    },
    {
     name: "Horuf-Platform",
@@ -298,6 +298,7 @@ Built responsive UI with custom theme switching between light/dark modes with co
     image: hourefimage,
     source_code_link: "https://github.com/mohamed-badr555/Horuf-Platform",
     LiveDemo:"https://www.hrouf-academy.com/",
+    category: "fullstack",
    },
    {
     name: "Hosoun Academy",
@@ -327,6 +328,7 @@ Built responsive UI with custom theme switching between light/dark modes with co
     image: Huson,
     source_code_link: "https://github.com",
     LiveDemo: "https://hosoun.com",
+    category: "fullstack",
    },
    {
     name: "Arkan Dental Clinic Website & Dashboard",
@@ -352,6 +354,7 @@ Built responsive UI with custom theme switching between light/dark modes with co
     image: Arkan,
     source_code_link: "https://github.com/mohamed-badr555",
     LiveDemo: "https://arkandental.com",
+    category: "frontend",
    },
    {
     name: "Sadad Financial Services Platform",
@@ -377,6 +380,7 @@ Built responsive UI with custom theme switching between light/dark modes with co
     image: Sadad,
     source_code_link: "https://github.com/mohamed-badr555",
     LiveDemo: "https://saddadqrod.com",
+    category: "frontend",
    },
 
 {
@@ -403,6 +407,7 @@ Built responsive UI with custom theme switching between light/dark modes with co
     image: Elshams,
     source_code_link: "https://github.com/mohamed-badr555",
     LiveDemo: "https://shamsfinishing.com",
+    category: "frontend",
    },
 
    {
@@ -433,6 +438,7 @@ Built responsive UI with custom theme switching between light/dark modes with co
     image: summit,
     source_code_link: "https://github.com",
     LiveDemo: "https://www.summitegypt.com",
+    category: "fullstack",
    },
    {
     name: "AFROGrains Trading Platform",
@@ -462,6 +468,7 @@ Built responsive UI with custom theme switching between light/dark modes with co
     image: Afro,
     source_code_link: "https://github.com",
     LiveDemo: "https://afrograins.com",
+    category: "fullstack",
    },
    {
     name: "Alto Company Website",
@@ -491,6 +498,7 @@ Built responsive UI with custom theme switching between light/dark modes with co
     image: Alto,
     source_code_link: "https://github.com",
     LiveDemo: "https://alto-ti.com",
+    category: "fullstack",
    },
    {
     name: "APTF Corporate Website",
@@ -520,6 +528,7 @@ Built responsive UI with custom theme switching between light/dark modes with co
     image: APTF,
     source_code_link: "https://github.com",
     LiveDemo: "https://aptf.com.sa",
+    category: "fullstack",
    }
 ];
   
