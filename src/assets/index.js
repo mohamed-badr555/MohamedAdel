@@ -47,6 +47,7 @@ import MindScope from "./mind-scope.png"
 import Arkan from "./arkan.png"
 import Sadad from "./sadad.png"
 import Elshams from "./elshams.png"
+import Peg from './company/peg.jpeg'
 export {
   logo,
   backend,
@@ -63,7 +64,7 @@ export {
   html,
   javascript,
 
-
+Peg,
   reactjs,
   redux,
   tailwind,

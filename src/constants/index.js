@@ -40,7 +40,8 @@ MindScope,
 Arkan,
 Sadad,
 Elshams,
-InnoCode
+InnoCode,
+Peg,
   } from "../assets";
   
   export const navLinks = [
@@ -129,11 +130,23 @@ InnoCode
   
   const experiences = [
     {
+      title: "Full-Stack Developer",
+      company_name: "PEG-Engineering Consulting",
+      icon: Peg,
+      iconBg: "#E6DEDD",
+      date: "Nov 2025 – Present",
+      points: [
+        "Built full-stack enterprise ERP and HRMS platforms using ASP.NET Core, DDD, Entity Framework, and SQL Server.",
+        "Engineered responsive, bilingual React.js and Next.js, Angular frontend architectures with TypeScript and Tailwind.",
+        "Integrated real-time SignalR, RabbitMQ messaging, secure REST APIs, and role-based access control.",
+      ],
+    },
+    {
       title: "Frontend Developer",
       company_name: "Inno Code",
       icon: InnoCode,
       iconBg: "#383E56",
-      date: "Jan 2025 – Aug 2025",
+      date: "Jun 2025 – Oct 2025",
       points: [
         "Building modern SaaS applications in AI, e-commerce, and internal ERP tools using React and Next.js.",
        "Contributed to UI consistency and reusable components using TypeScript and Tailwind CSS",
