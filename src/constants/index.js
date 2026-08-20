@@ -42,6 +42,8 @@ Sadad,
 Elshams,
 InnoCode,
 Peg,
+qutoof,
+elbasira,
   } from "../assets";
   
   export const navLinks = [
@@ -246,313 +248,403 @@ Peg,
   ];
   
   const projects = [
-   {
-    name: "Mind-Scope",
-    description:
-    "Developed a comprehensive AI assistant platform with multilingual support (English & Arabic) and RTL layout capabilities\
-Implemented multiple AI generation tools including text chat, code generation, email composition, and AI image creation\
-Built responsive UI with custom theme switching between light/dark modes with consistent styling across components\
-",
-    tags: [
-      {
-        name: "next.js",
-        color: "blue-text-gradient",
-      },
-          {
-        name: "tailwindCSS",
-        color: "green-text-gradient",
-      },
-     {
-        name: "i18next",
-        color: "green-text-gradient",
-      },
-      {
-        name: "sal.js",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "sweetalert2",
-        color: "orange-text-gradient",
-      }
-    ],
-    image: MindScope,
-    source_code_link: "https://github.com/mohamed-badr555",
-    LiveDemo:"https://mind-scope.ae/",
-    category: "fullstack",
-    isPrivate: true,
-   },
-   {
-    name: "Horuf-Platform",
-    description:
-    "Hrouf Academy is a single-page application (SPA) developed with React, designed for managing and displaying Teachers in Teaching center called Hrouf Academy.\
-     It includes a search feature to help users find their desired Teachers.\
-",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-          {
-        name: "Bootstrap",
-        color: "green-text-gradient",
-      },
-     {
-        name: "Web API",
-        color: "green-text-gradient",
-      },
-      {
-        name: "MVC",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "SQL",
-        color: "orange-text-gradient",
-      }
-    ],
-    image: hourefimage,
-    source_code_link: "https://github.com/mohamed-badr555/Horuf-Platform",
-    LiveDemo:"https://www.hrouf-academy.com/",
-    category: "fullstack",
-    isPrivate: false,
-   },
-   {
-    name: "Hosoun Academy",
-    description: "A comprehensive educational platform offering modern learning experiences including recorded courses, live online classes, teaching jobs, educational articles, and digital book sales. Features secure payment gateway, teacher dashboard for course management, and admin panel for performance monitoring.",
-    tags: [
-      {
-        name: "React",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Bootstrap",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Web API",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "MVC",
-        color: "orange-text-gradient",
-      },
-      {
-        name: "SQL",
-        color: "blue-text-gradient",
-      }
-    ],
-    image: Huson,
-    source_code_link: "https://github.com",
-    LiveDemo: "https://hosoun.com",
-    category: "fullstack",
-    isPrivate: true,
-   },
-   {
-    name: "Arkan Dental Clinic Website & Dashboard",
-    description: "Developed bilingual dental clinic website & CMS dashboard using Next.js, TypeScript and RESTful integration. Built comprehensive content management system with TypeScript-based API integration for secure. Implemented responsive UI with internationalization support, dynamic image optimization.",
-    tags: [
-      {
-        name: "Next.js",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "TailwindCSS",
-        color: "green-text-gradient",
-      },
-      {
-        name: "i18n",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "Context",
-        color: "orange-text-gradient",
-      }
-    ],
-    image: Arkan,
-    source_code_link: "https://github.com/mohamed-badr555",
-    LiveDemo: "https://arkandental.com",
-    category: "frontend",
-    isPrivate: true,
-   },
-   {
-    name: "Sadad Financial Services Platform",
-    description: "Engineered a Next.js financial platform with app router architecture for Arabic loan payment services with dynamic routing Implemented RTL-optimized UI using Tailwind CSS with animated components via Framer Motion for seamless user experience Built content-driven system with dynamic article rendering category-based navigation and custom search functionality",
-    tags: [
-      {
-        name: "Next.js",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "TailwindCSS",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Framer-Motion",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "Context",
-        color: "orange-text-gradient",
-      }
-    ],
-    image: Sadad,
-    source_code_link: "https://github.com/mohamed-badr555",
-    LiveDemo: "https://saddadqrod.com",
-    category: "frontend",
-    isPrivate: true,
-   },
-
-{
-    name: "Elshams Platform & CMS Dashboard",
-    description:"Engineered bilingual construction portfolio platform with Next.js App Router and TypeScript. Developed comprehensive dashboard for content management enabling dynamic project showcases, client testimonials, and multimedia galleries. Implemented responsive UI with internationalization (AR/EN), lazy-loaded YouTube integration, optimized image handling, and animated components using Framer Motion for enhanced user engagement.",
-    tags: [
-      {
-        name: "Next.js",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "TailwindCSS",
-        color: "green-text-gradient",
-      },
-      {
-        name: "i18n",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "Context",
-        color: "orange-text-gradient",
-      }
-    ],
-    image: Elshams,
-    source_code_link: "https://github.com/mohamed-badr555",
-    LiveDemo: "https://shamsfinishing.com",
-    category: "frontend",
-    isPrivate: true,
-   },
-
-   {
-    name: "Summit Egypt Real Estate",
-    description: "A comprehensive real estate platform for buying and renting properties in Egypt. Features modern UI, property management system, secure payment gateway for deposits, and integrated admin dashboard. Built with React frontend and ASP.NET Core backend for robust performance.",
-    tags: [
-      {
-        name: "React",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Bootstrap",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Web API",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "MVC",
-        color: "orange-text-gradient",
-      },
-      {
-        name: "SQL",
-        color: "blue-text-gradient",
-      }
-    ],
-    image: summit,
-    source_code_link: "https://github.com",
-    LiveDemo: "https://www.summitegypt.com",
-    category: "fullstack",
-    isPrivate: true,
-   },
-   {
-    name: "AFROGrains Trading Platform",
-    description: "International trading platform for AFROGrains L.L.C, specializing in agricultural supplies, fertilizers, and industrial raw materials. Features innovative financial solutions and global trade connections, focusing on African markets since 1977.",
-    tags: [
-      {
-        name: "React",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Bootstrap",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Web API",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "MVC",
-        color: "orange-text-gradient",
-      },
-      {
-        name: "SQL",
-        color: "blue-text-gradient",
-      }
-    ],
-    image: Afro,
-    source_code_link: "https://github.com",
-    LiveDemo: "https://afrograins.com",
-    category: "fullstack",
-    isPrivate: true,
-   },
-   {
-    name: "Alto Company Website",
-    description: "Interactive website for Alto, a supply chain analysis company. Features professional service showcase, business intelligence solutions, and global supplier network integration. Optimized for performance and user experience.",
-    tags: [
-      {
-        name: "React",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Bootstrap",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Web API",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "MVC",
-        color: "orange-text-gradient",
-      },
-      {
-        name: "SQL",
-        color: "blue-text-gradient",
-      }
-    ],
-    image: Alto,
-    source_code_link: "https://github.com",
-    LiveDemo: "https://alto-ti.com",
-    category: "fullstack",
-    isPrivate: true,
-   },
-   {
-    name: "APTF Corporate Website",
-    description: "Bilingual corporate website for Arabian Plastic Technology Factory (APTF), showcasing their plastic manufacturing products and services. Features responsive design, detailed product catalogs, and optimized performance.",
-    tags: [
-      {
-        name: "React",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Bootstrap",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Web API",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "MVC",
-        color: "orange-text-gradient",
-      },
-      {
-        name: "SQL",
-        color: "blue-text-gradient",
-      }
-    ],
-    image: APTF,
-    source_code_link: "https://github.com",
-    LiveDemo: "https://aptf.com.sa",
-    category: "fullstack",
-    isPrivate: true,
-   }
-];
+    {
+      id: "hosoun-academy",
+      name: "Hosoun Academy",
+      tagline: "Comprehensive Educational Platform for Online Learning, Live Sessions & Book Sales",
+      role: "Full-Stack Developer",
+      year: "2024 – 2025",
+      client: "Hosoun Academy",
+      category: "fullstack",
+      description: "A comprehensive educational platform offering modern learning experiences including recorded courses, live online classes, teaching jobs, educational articles, and digital book sales. Features secure payment gateway, teacher dashboard for course management, and admin panel for performance monitoring.",
+      features: [
+        "Recorded Courses & Interactive Live Online Classrooms",
+        "Teacher Dashboard for Course Management & Scheduling",
+        "Admin Control Panel for Performance Monitoring & Analytics",
+        "Digital Book Sales & Educational Article Publishing",
+        "Secure Online Payment Gateway Integration"
+      ],
+      architecture: [
+        "React.js single-page architecture with Bootstrap responsive design",
+        "ASP.NET Core Web API & MVC backend services",
+        "Microsoft SQL Server database with Entity Framework ORM",
+        "Role-based access control for students, teachers, and administrators"
+      ],
+      tags: [
+        { name: "React", color: "blue-text-gradient" },
+        { name: "Bootstrap", color: "green-text-gradient" },
+        { name: "Web API", color: "pink-text-gradient" },
+        { name: "MVC", color: "orange-text-gradient" },
+        { name: "SQL", color: "blue-text-gradient" }
+      ],
+      image: Huson,
+      source_code_link: "https://github.com",
+      LiveDemo: "https://hosoun.com",
+      isPrivate: true,
+    },
+    {
+      id: "qutoof-organic",
+      name: "Qutoof Organic Platform & CMS Dashboard",
+      tagline: "Bilingual Organic Food & Beverage Marketplace with Real-Time Content Management CMS",
+      role: "Frontend Developer & UI Engineer",
+      year: "2025 – 2026",
+      client: "Qutoof Organic",
+      category: "frontend",
+      description: "Developed a modern bilingual organic food & beverage platform and administrative CMS dashboard. Built dynamic product showcases (coffee, tea, herbs, and healthy drinks), full RTL support, interactive nationwide delivery locator across Egypt, customer reviews, and comprehensive content management tools for real-time catalog control.",
+      features: [
+        "Diverse Product Showcase & Dynamic Catalog (Coffee, Tea, Herbs & Healthy Drinks)",
+        "Full-Featured Administrative CMS Dashboard to control products, content, and banners",
+        "Complete Arabic RTL & English layout support with responsive typography",
+        "Interactive Nationwide Delivery & Regional Distribution Locator across Egypt",
+        "Customer Reviews, Testimonials & Trust Validation System",
+        "High-Performance Image Gallery with Lazy Loading & Mobile-First Optimization"
+      ],
+      architecture: [
+        "Next.js App Router with Server-Side & Static Generation for optimal SEO",
+        "Tailwind CSS with responsive design system and RTL-first layout classes",
+        "Context API for global state management and theme / language localization",
+        "RESTful API integration for real-time catalog fetching and content updates"
+      ],
+      tags: [
+        { name: "Next.js", color: "blue-text-gradient" },
+        { name: "TailwindCSS", color: "green-text-gradient" },
+        { name: "i18n", color: "pink-text-gradient" },
+        { name: "Context", color: "orange-text-gradient" }
+      ],
+      image: qutoof,
+      source_code_link: "https://github.com",
+      LiveDemo: "https://qutooforganic.com/",
+      isPrivate: true,
+    },
+    {
+      id: "elbasira-law-firm",
+      name: "Al-Basira Law Firm Website",
+      tagline: "Corporate Legal Services Platform with Arabic RTL & English Internationalization",
+      role: "Frontend Developer & UI Engineer",
+      year: "2025 – 2026",
+      client: "Al-Basira Al-Rashida Law Firm",
+      category: "frontend",
+      description: "Developed a modern corporate website for Al-Basira Al-Rashida law firm in Saudi Arabia with full Arabic (RTL) and English support. Features interactive legal service showcases, animated achievement statistics, client testimonials slider, FAQ accordions, appointment booking, and dynamic consultation request forms.",
+      features: [
+        "Arabic (RTL) & English Corporate Legal Platform with Modern Typography",
+        "Interactive Legal Services Showcase with Detailed Consultation Views",
+        "Animated Statistics & Achievements Counter (Cases, Sessions, Success Rate)",
+        "Client Testimonials Slider with Star Ratings & Real-Time Feedback",
+        "Dynamic Appointment Booking & Consultation Request Forms with Validation",
+        "Accordion-Style FAQ System with Smooth Collapse Transitions"
+      ],
+      architecture: [
+        "React frontend architecture with modular component composition",
+        "Tailwind CSS styling with customized Saudi legal corporate color palette",
+        "Framer Motion for animated section reveals, counters, and testimonial sliders",
+        "Semantic HTML5 & WCAG 2.1 accessibility compliance"
+      ],
+      tags: [
+        { name: "React", color: "blue-text-gradient" },
+        { name: "TailwindCSS", color: "green-text-gradient" },
+        { name: "i18n", color: "pink-text-gradient" },
+        { name: "Framer-Motion", color: "orange-text-gradient" }
+      ],
+      image: elbasira,
+      source_code_link: "https://github.com",
+      LiveDemo: "https://elbasira.net/ar",
+      isPrivate: true,
+    },
+    {
+      id: "mind-scope",
+      name: "Mind-Scope AI Platform",
+      tagline: "Multilingual AI Assistant Platform with Multi-Model Generation Tools",
+      role: "Full-Stack Developer",
+      year: "2025",
+      client: "Mind-Scope AI",
+      category: "fullstack",
+      description: "Developed a comprehensive AI assistant platform with multilingual support (English & Arabic) and RTL layout capabilities. Implemented multiple AI generation tools including text chat, code generation, email composition, and AI image creation. Built responsive UI with custom theme switching between light/dark modes with consistent styling across components.",
+      features: [
+        "Bilingual AI Assistant Platform with English & Arabic RTL capabilities",
+        "Multi-Tool AI Suite: Text Chat, Code Generation, and Email Composition",
+        "AI Image Generation and Visual Asset Processing",
+        "Custom Dark / Light Theme Engine with Persistent State",
+        "Responsive UI with High-Performance Micro-Animations"
+      ],
+      architecture: [
+        "Next.js App Router for serverless API handling and lightning-fast frontend",
+        "Tailwind CSS with custom CSS variables for seamless dark/light theme switching",
+        "i18next for comprehensive English and Arabic translation & RTL orientation",
+        "Sal.js and SweetAlert2 for rich notification flows and scroll reveals"
+      ],
+      tags: [
+        { name: "next.js", color: "blue-text-gradient" },
+        { name: "tailwindCSS", color: "green-text-gradient" },
+        { name: "i18next", color: "green-text-gradient" },
+        { name: "sal.js", color: "pink-text-gradient" },
+        { name: "sweetalert2", color: "orange-text-gradient" }
+      ],
+      image: MindScope,
+      source_code_link: "https://github.com",
+      LiveDemo: "https://mind-scope.ae/",
+      isPrivate: true,
+    },
+    {
+      id: "horuf-platform",
+      name: "Horuf Platform",
+      tagline: "Educational Single-Page Application for Teacher & Academy Management",
+      role: "Full-Stack Developer",
+      year: "2024",
+      client: "Hrouf Academy",
+      category: "fullstack",
+      description: "Hrouf Academy is a single-page application (SPA) developed with React, designed for managing and displaying Teachers in Teaching center called Hrouf Academy. It includes an advanced search feature to help users find their desired Teachers.",
+      features: [
+        "Single-Page Application (SPA) with High-Performance React Architecture",
+        "Dynamic Teacher Search, Filter & Profile Showcase System",
+        "Admin Management Dashboard for Teaching Centers",
+        "RESTful ASP.NET Web API Integration with SQL Server Database"
+      ],
+      architecture: [
+        "React SPA with fast client-side routing and instant filtering",
+        "Bootstrap responsive UI framework",
+        "ASP.NET MVC & Web API for robust data layer",
+        "SQL Server backend database"
+      ],
+      tags: [
+        { name: "react", color: "blue-text-gradient" },
+        { name: "Bootstrap", color: "green-text-gradient" },
+        { name: "Web API", color: "pink-text-gradient" },
+        { name: "MVC", color: "orange-text-gradient" },
+        { name: "SQL", color: "blue-text-gradient" }
+      ],
+      image: hourefimage,
+      source_code_link: "https://github.com/mohamed-badr555/Horuf-Platform",
+      LiveDemo: "https://www.hrouf-academy.com/",
+      isPrivate: false,
+    },
+    {
+      id: "arkan-dental",
+      name: "Arkan Dental Clinic Website & Dashboard",
+      tagline: "Bilingual Dental Healthcare Platform & Medical Content Management System",
+      role: "Frontend Developer",
+      year: "2024 – 2025",
+      client: "Arkan Dental Clinic",
+      category: "frontend",
+      description: "Developed bilingual dental clinic website & CMS dashboard using Next.js, TypeScript and RESTful integration. Built comprehensive content management system with TypeScript-based API integration for secure operations. Implemented responsive UI with internationalization support and dynamic image optimization.",
+      features: [
+        "Bilingual (AR/EN) Dental Clinic Web Experience with Dynamic Internationalization",
+        "Custom Content Management Dashboard for Medical Staff & Clinic Services",
+        "TypeScript-Based RESTful API Integration with Strict Type Safety",
+        "Optimized Image Handling, Patient Appointment Booking & Doctor Profiles"
+      ],
+      architecture: [
+        "Next.js App Router with TypeScript for type-safe frontend components",
+        "Tailwind CSS for responsive medical design system",
+        "Custom Context API for localization and dashboard session state",
+        "Optimized next/image pipeline for fast load times on medical imagery"
+      ],
+      tags: [
+        { name: "Next.js", color: "blue-text-gradient" },
+        { name: "TailwindCSS", color: "green-text-gradient" },
+        { name: "i18n", color: "pink-text-gradient" },
+        { name: "Context", color: "orange-text-gradient" }
+      ],
+      image: Arkan,
+      source_code_link: "https://github.com",
+      LiveDemo: "https://arkandental.com",
+      isPrivate: true,
+    },
+    {
+      id: "sadad-financial",
+      name: "Sadad Financial Services Platform",
+      tagline: "Arabic Financial Services Platform with Dynamic Loan Tracking & Calculations",
+      role: "Frontend Developer",
+      year: "2024 – 2025",
+      client: "Sadad Financial Services",
+      category: "frontend",
+      description: "Engineered a Next.js financial platform with app router architecture for Arabic loan payment services with dynamic routing. Implemented RTL-optimized UI using Tailwind CSS with animated components via Framer Motion for seamless user experience. Built content-driven system with dynamic article rendering, category-based navigation, and custom search functionality.",
+      features: [
+        "Next.js App Router Architecture with Dynamic Routing for Financial Portals",
+        "RTL-Optimized UI Engineered with Tailwind CSS and Framer Motion",
+        "Interactive Loan Payment Calculators & Financial Service Guides",
+        "Content-Driven Dynamic Article Rendering and Search Functionality"
+      ],
+      architecture: [
+        "Next.js App Router with dynamic SSR routes for financial articles",
+        "Tailwind CSS RTL configuration for Arabic layout perfection",
+        "Framer Motion for high-fidelity interactive animations",
+        "Context-driven search and filter state management"
+      ],
+      tags: [
+        { name: "Next.js", color: "blue-text-gradient" },
+        { name: "TailwindCSS", color: "green-text-gradient" },
+        { name: "Framer-Motion", color: "pink-text-gradient" },
+        { name: "Context", color: "orange-text-gradient" }
+      ],
+      image: Sadad,
+      source_code_link: "https://github.com",
+      LiveDemo: "https://saddadqrod.com",
+      isPrivate: true,
+    },
+    {
+      id: "elshams-finishing",
+      name: "Elshams Platform & CMS Dashboard",
+      tagline: "Bilingual Architectural Finishing Showcase with Dynamic Multimedia CMS",
+      role: "Frontend Developer",
+      year: "2024 – 2025",
+      client: "Elshams Finishing",
+      category: "frontend",
+      description: "Engineered bilingual construction portfolio platform with Next.js App Router and TypeScript. Developed comprehensive dashboard for content management enabling dynamic project showcases, client testimonials, and multimedia galleries. Implemented responsive UI with internationalization (AR/EN), lazy-loaded YouTube integration, optimized image handling, and animated components using Framer Motion for enhanced user engagement.",
+      features: [
+        "Bilingual Construction & Interior Finishing Portfolio with Next.js App Router",
+        "Comprehensive CMS Dashboard for Dynamic Project & Gallery Management",
+        "Lazy-Loaded YouTube Video Integration & Multimedia Showcase",
+        "Animated Interactive Components with Framer Motion and Smooth Transitions"
+      ],
+      architecture: [
+        "Next.js App Router with TypeScript for robust component architecture",
+        "Tailwind CSS custom design system tailored for high-end construction aesthetics",
+        "i18n internationalization module supporting Arabic and English",
+        "Custom YouTube API lazy loader for optimal page speed"
+      ],
+      tags: [
+        { name: "Next.js", color: "blue-text-gradient" },
+        { name: "TailwindCSS", color: "green-text-gradient" },
+        { name: "i18n", color: "pink-text-gradient" },
+        { name: "Context", color: "orange-text-gradient" }
+      ],
+      image: Elshams,
+      source_code_link: "https://github.com",
+      LiveDemo: "https://shamsfinishing.com",
+      isPrivate: true,
+    },
+    {
+      id: "summit-egypt",
+      name: "Summit Egypt Real Estate",
+      tagline: "Comprehensive Real Estate Marketplace for Egyptian Property Buying & Renting",
+      role: "Full-Stack Developer",
+      year: "2023 – 2024",
+      client: "Summit Egypt",
+      category: "fullstack",
+      description: "A comprehensive real estate platform for buying and renting properties in Egypt. Features modern UI, property management system, secure payment gateway for deposits, and integrated admin dashboard. Built with React frontend and ASP.NET Core backend for robust performance.",
+      features: [
+        "Real Estate Marketplace for Buying and Renting Properties across Egypt",
+        "Property Management System with Integrated Admin Dashboard",
+        "Secure Payment Gateway for Online Property Deposits & Booking",
+        "Robust ASP.NET Core & SQL Server Backend Architecture"
+      ],
+      architecture: [
+        "React frontend with reusable property filter and card components",
+        "Bootstrap grid and styling system",
+        "ASP.NET Core Web API with clean architecture",
+        "Microsoft SQL Server relational database"
+      ],
+      tags: [
+        { name: "React", color: "blue-text-gradient" },
+        { name: "Bootstrap", color: "green-text-gradient" },
+        { name: "Web API", color: "pink-text-gradient" },
+        { name: "MVC", color: "orange-text-gradient" },
+        { name: "SQL", color: "blue-text-gradient" }
+      ],
+      image: summit,
+      source_code_link: "https://github.com",
+      LiveDemo: "https://www.summitegypt.com",
+      isPrivate: true,
+    },
+    {
+      id: "afrograins",
+      name: "AFROGrains Trading Platform",
+      tagline: "International Commodity Trading Platform for Agricultural Raw Materials",
+      role: "Full-Stack Developer",
+      year: "2023 – 2024",
+      client: "AFROGrains L.L.C",
+      category: "fullstack",
+      description: "International trading platform for AFROGrains L.L.C, specializing in agricultural supplies, fertilizers, and industrial raw materials. Features innovative financial solutions and global trade connections, focusing on African markets since 1977.",
+      features: [
+        "International B2B Agricultural Commodities Trading Platform",
+        "Global Supply Chain Network & Logistics Showcase",
+        "B2B Trade Inquiries, Quote Generation & Product Specs",
+        "Responsive Multi-Device Interface with Enterprise Styling"
+      ],
+      architecture: [
+        "React.js frontend for high-speed catalog exploration",
+        "ASP.NET MVC & Web API for business logic execution",
+        "SQL Server database for product categories and inquiries",
+        "Bootstrap responsive framework"
+      ],
+      tags: [
+        { name: "React", color: "blue-text-gradient" },
+        { name: "Bootstrap", color: "green-text-gradient" },
+        { name: "Web API", color: "pink-text-gradient" },
+        { name: "MVC", color: "orange-text-gradient" },
+        { name: "SQL", color: "blue-text-gradient" }
+      ],
+      image: Afro,
+      source_code_link: "https://github.com",
+      LiveDemo: "https://afrograins.com",
+      isPrivate: true,
+    },
+    {
+      id: "alto-company",
+      name: "Alto Company Website",
+      tagline: "Supply Chain Intelligence & Global Supplier Network Platform",
+      role: "Full-Stack Developer",
+      year: "2023 – 2024",
+      client: "Alto Technologies",
+      category: "fullstack",
+      description: "Interactive website for Alto, a supply chain analysis company. Features professional service showcase, business intelligence solutions, and global supplier network integration. Optimized for performance and user experience.",
+      features: [
+        "Supply Chain Analytics & Business Intelligence Platform",
+        "Interactive Professional Service Showcase & Global Supplier Network",
+        "Optimized Web API Integration with Fast Data Visualization",
+        "Clean Enterprise UI Design with High-Speed Response"
+      ],
+      architecture: [
+        "React.js frontend client with custom data visualization components",
+        "ASP.NET Core Web API with high throughput",
+        "SQL Server database for business analytics data",
+        "Bootstrap layout grid"
+      ],
+      tags: [
+        { name: "React", color: "blue-text-gradient" },
+        { name: "Bootstrap", color: "green-text-gradient" },
+        { name: "Web API", color: "pink-text-gradient" },
+        { name: "MVC", color: "orange-text-gradient" },
+        { name: "SQL", color: "blue-text-gradient" }
+      ],
+      image: Alto,
+      source_code_link: "https://github.com",
+      LiveDemo: "https://alto-ti.com",
+      isPrivate: true,
+    },
+    {
+      id: "aptf-corporate",
+      name: "APTF Corporate Website",
+      tagline: "Bilingual Corporate Platform for Industrial Plastic Manufacturing",
+      role: "Full-Stack Developer",
+      year: "2023 – 2024",
+      client: "APTF Factory",
+      category: "fullstack",
+      description: "Bilingual corporate website for Arabian Plastic Technology Factory (APTF), showcasing their plastic manufacturing products and services. Features responsive design, detailed product catalogs, and optimized performance.",
+      features: [
+        "Bilingual Corporate Manufacturing Platform for Industrial Plastic Solutions",
+        "Comprehensive Digital Product Catalogs & Technical Specifications",
+        "Optimized Performance with Responsive Multi-Screen Layouts",
+        "Client Inquiry & Quotation Submission Workflow"
+      ],
+      architecture: [
+        "React.js bilingual presentation layer",
+        "ASP.NET Web API backend for inquiry processing",
+        "SQL Server database management",
+        "Bootstrap design tokens"
+      ],
+      tags: [
+        { name: "React", color: "blue-text-gradient" },
+        { name: "Bootstrap", color: "green-text-gradient" },
+        { name: "Web API", color: "pink-text-gradient" },
+        { name: "MVC", color: "orange-text-gradient" },
+        { name: "SQL", color: "blue-text-gradient" }
+      ],
+      image: APTF,
+      source_code_link: "https://github.com",
+      LiveDemo: "https://aptf.com.sa",
+      isPrivate: true,
+    }
+  ];
   
   export { services, technologies, experiences, testimonials, projects };
