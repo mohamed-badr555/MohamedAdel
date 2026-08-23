@@ -3,9 +3,17 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
+import ErrorBoundary from "../ErrorBoundary";
+
+const getModelPath = (path) => {
+  const base = import.meta.env.BASE_URL || '/';
+  const cleanBase = base.endsWith('/') ? base : base + '/';
+  const cleanPath = path.startsWith('/') ? path.slice(1) : path.startsWith('./') ? path.slice(2) : path;
+  return `${cleanBase}${cleanPath}`;
+};
 
 const Computers = ({ isMobile }) => {
-  const computer = useGLTF("./desktop_pc/scene.gltf");
+  const computer = useGLTF(getModelPath('desktop_pc/scene.gltf'));
 
   return (
     <mesh>
@@ -54,36 +62,38 @@ const ComputersCanvas = () => {
     };
   }, []);
 
-  // Skip heavy 3D canvas on mobile — it crashes and shows white screen
+  // Skip heavy 3D canvas on mobile
   if (isMobile) {
     return null;
   }
 
   return (
-    <Canvas
-      frameloop='demand'
-      shadows
-      dpr={[1, 2]}
-      camera={{ 
-        position: [20, 3, 5], 
-        fov: isSmallScreen ? 25 : 22 
-      }}
-      gl={{ 
-        preserveDrawingBuffer: true,
-        powerPreference: "high-performance",
-      }}
-    >
-      <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls
-          enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
-        />
-        <Computers isMobile={false} />
-      </Suspense>
+    <ErrorBoundary fallback={null}>
+      <Canvas
+        frameloop='demand'
+        shadows
+        dpr={[1, 2]}
+        camera={{ 
+          position: [20, 3, 5], 
+          fov: isSmallScreen ? 25 : 22 
+        }}
+        gl={{ 
+          preserveDrawingBuffer: true,
+          powerPreference: "high-performance",
+        }}
+      >
+        <Suspense fallback={<CanvasLoader />}>
+          <OrbitControls
+            enableZoom={false}
+            maxPolarAngle={Math.PI / 2}
+            minPolarAngle={Math.PI / 2}
+          />
+          <Computers isMobile={false} />
+        </Suspense>
 
-      <Preload all />
-    </Canvas>
+        <Preload all />
+      </Canvas>
+    </ErrorBoundary>
   );
 };
 

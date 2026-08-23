@@ -9,6 +9,7 @@ import {
 } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
+import ErrorBoundary from "../ErrorBoundary";
 
 const Ball = (props) => {
   const [decal] = useTexture([props.imgUrl]);
@@ -39,18 +40,24 @@ const Ball = (props) => {
 
 const BallCanvas = ({ icon }) => {
   return (
-    <Canvas
-      frameloop='demand'
-      dpr={[1, 2]}
-      gl={{ preserveDrawingBuffer: true }}
-    >
-      <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls enableZoom={false} />
-        <Ball imgUrl={icon} />
-      </Suspense>
+    <ErrorBoundary fallback={
+      <div className="w-24 h-24 rounded-full bg-tertiary flex items-center justify-center p-3 border border-white/10 shadow-lg">
+        <img src={icon} alt="tech" className="w-12 h-12 object-contain" />
+      </div>
+    }>
+      <Canvas
+        frameloop='demand'
+        dpr={[1, 2]}
+        gl={{ preserveDrawingBuffer: true }}
+      >
+        <Suspense fallback={<CanvasLoader />}>
+          <OrbitControls enableZoom={false} />
+          <Ball imgUrl={icon} />
+        </Suspense>
 
-      <Preload all />
-    </Canvas>
+        <Preload all />
+      </Canvas>
+    </ErrorBoundary>
   );
 };
 
