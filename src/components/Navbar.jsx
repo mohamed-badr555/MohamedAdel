@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { styles } from '../styles'
+import { useNavigate, useLocation } from 'react-router-dom'
 import { navLinks } from './../constants/index';
-import {  menu ,close } from '../assets';
+import { menu, close } from '../assets';
 import logo from '../assets/logo.png'
 
 const scrollToSection = (id) => {
@@ -11,10 +12,24 @@ const scrollToSection = (id) => {
   }
 };
 
-
 const Navbar = () => {
   const [active, setActive] = useState('')
   const [toggle, setToggle] = useState(false)
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleNavClick = (id, title) => {
+    setActive(title);
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        scrollToSection(id);
+      }, 120);
+    } else {
+      scrollToSection(id);
+    }
+  };
+
   return (
     <nav className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}>
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
@@ -22,7 +37,11 @@ const Navbar = () => {
           className='flex items-center gap-2 cursor-pointer' 
           onClick={()=> {
             setActive("")
-            window.scrollTo({ top: 0, behavior: 'smooth' })
+            if (location.pathname !== '/') {
+              navigate('/');
+            } else {
+              window.scrollTo({ top: 0, behavior: 'smooth' })
+            }
           }}
         >
           <img src={logo} alt="logo" className=' object-contain' style={{height:'36px' , width:'36px'}} />
@@ -32,15 +51,12 @@ const Navbar = () => {
         <ul className="list-none hidden items-center  md:flex  md:flex-row gap-10 ">
           {navLinks.map((link)=> (
             <li key={link.id} className={`${active == link.title ? "text-white" :"text-secondary"}
-             hover:text-white text-[18] font-medium cursor-pointer `}
-             onClick={()=>{
-              setActive(link.title) 
-              scrollToSection(link.id); // Scroll to the section
-             }}>
-               <span>{link.title}</span> {/* Remove <a href> */}
+             hover:text-white text-[18px] font-medium cursor-pointer transition-colors`}
+             onClick={() => handleNavClick(link.id, link.title)}>
+               <span>{link.title}</span>
             </li>
           ))}
-            <li className={`bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md cursor-pointer shadow-primary rounded-xl`}>
+            <li className={`bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md cursor-pointer shadow-primary rounded-xl hover:bg-[#915EFF]/20 transition-all`}>
               <a  
                 href="https://drive.google.com/file/d/1KaWAI1k9p_szsgzUAiR1SjsQ_aEQFvJX/view?usp=sharing" 
                 target="_blank" 
@@ -64,8 +80,7 @@ const Navbar = () => {
              font-poppins font-medium cursor-pointer text-[16px] `}
              onClick={()=>{
               setToggle(!toggle)
-              setActive(link.title) 
-              scrollToSection(link.id);
+              handleNavClick(link.id, link.title);
               }}>
               <span>{link.title}</span>
             </li>

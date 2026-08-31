@@ -47,6 +47,9 @@ import MindScope from "./mind-scope.png"
 import Arkan from "./arkan.png"
 import Sadad from "./sadad.png"
 import Elshams from "./elshams.png"
+import Peg from './company/peg.jpeg'
+import qutoof from './qutoof.png'
+import elbasira from './elbasira.png'
 export {
   logo,
   backend,
@@ -63,7 +66,7 @@ export {
   html,
   javascript,
 
-
+Peg,
   reactjs,
   redux,
   tailwind,
@@ -96,5 +99,7 @@ APTF,
 MindScope,
 Arkan,
 Sadad,
-Elshams
+Elshams,
+qutoof,
+elbasira
 };
