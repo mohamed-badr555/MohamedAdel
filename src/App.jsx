@@ -7,7 +7,7 @@ function App() {
 
 
   return (
-     <BrowserRouter>
+     <BrowserRouter basename={import.meta.env.BASE_URL}>
       <div className="relative z-0 bg-primary">
       <div className="bg-cover bg-hero-pattern bg-no-repeat bg-center">
       <Navbar/>
