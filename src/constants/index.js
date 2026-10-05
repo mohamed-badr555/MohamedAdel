@@ -46,6 +46,8 @@ qutoof,
 elbasira,
 abdelhamid,
 almanzoor,
+maharaedara,
+mediaReef,
   } from "../assets";
   
   export const navLinks = [
@@ -251,6 +253,47 @@ almanzoor,
   
   const projects = [
     {
+      id: "reef-pmo",
+      name: "Reef – Enterprise PMO & Media Platform",
+      tagline: "Saudi Sustainable Rural Development Ecosystem with Next.js Media Hub, Angular PMO Portal & ASP.NET Core CQRS Backend",
+      role: "Full-Stack Developer",
+      year: "2025 – Present",
+      client: "Saudi Ministry of Environment, Water & Agriculture (MEWA)",
+      category: "fullstack",
+      description: "An enterprise full-stack ecosystem built for the Saudi Sustainable Rural Agricultural Development Program (Reef PMO). The system comprises two synchronized platforms: a modern bilingual media and knowledge hub built with Next.js App Router for public awareness, and an advanced enterprise PMO portal built with Angular & PrimeNG to govern the entire workflow of engineering consultants and contractors. Backed by ASP.NET Core Web API with Clean Architecture, CQRS (MediatR), RabbitMQ messaging, and SignalR real-time communications.",
+      features: [
+        "Public Media & Knowledge Hub built with Next.js App Router, Turbopack & Tailwind CSS",
+        "Enterprise PMO Portal for Consultant & Contractor Workflow Governance and Task Execution",
+        "Financial Statement & Extractor Approval Engine (المستخلصات المالية) with Verification Lifecycles",
+        "Dynamic Arabic (RTL) Interface with PrimeNG & Tailwind UI Component Architecture",
+        "Comprehensive HR Subsystem with 33+ Entities and Granular Role-Based Access Control (RBAC)",
+        "Multi-Version Analytics Dashboards Tracking Agricultural Sector KPIs and Contractor Performance",
+        "Real-Time Chat & Activity Stream using SignalR with RabbitMQ Asynchronous Message Queues",
+        "Automated Executive Reporting Engine generating dynamic PDF/Excel Progress Manifests"
+      ],
+      architecture: [
+        "ASP.NET Core Web API built with Clean Architecture, CQRS pattern, and MediatR handlers",
+        "Angular enterprise frontend with PrimeNG, Angular Material, and reactive RxJS state pipelines",
+        "Next.js App Router for lightning-fast public media content rendering and SEO optimization",
+        "Microsoft SQL Server relational database with Entity Framework Core & Dapper optimizations",
+        "RabbitMQ distributed message broker coordinating background tasks and notification dispatching",
+        "SignalR persistent WebSocket channels for real-time collaboration and approval notifications"
+      ],
+      tags: [
+        { name: "ASP.NET Core", color: "blue-text-gradient" },
+        { name: "CQRS", color: "green-text-gradient" },
+        { name: "Clean Architecture", color: "pink-text-gradient" },
+        { name: "Angular", color: "orange-text-gradient" },
+        { name: "Next.js", color: "blue-text-gradient" },
+        { name: "SignalR", color: "green-text-gradient" },
+        { name: "RabbitMQ", color: "pink-text-gradient" }
+      ],
+      image: mediaReef,
+      source_code_link: "https://github.com",
+      LiveDemo: "https://reefpmo.com/",
+      isPrivate: true,
+    },
+    {
       id: "hosoun-academy",
       name: "Hosoun Academy",
       tagline: "Comprehensive Educational Platform for Online Learning, Live Sessions & Book Sales",
@@ -432,6 +475,48 @@ almanzoor,
       image: almanzoor,
       source_code_link: "https://github.com",
       LiveDemo: "https://almanzoor-web.vercel.app/en",
+      isPrivate: true,
+    },
+    {
+      id: "mahara-edara",
+      name: "Maharah Edara – Portfolio & CMS Dashboard",
+      tagline: "End-to-End Enterprise Advisory Platform with ASP.NET Core DDD Architecture & Next.js CMS Dashboard",
+      role: "Full-Stack Developer",
+      year: "2025 – 2026",
+      client: "Maharah Edara (Saudi Arabia & Egypt)",
+      category: "fullstack",
+      description: "An enterprise-grade, end-to-end full-stack platform built with ASP.NET Core following Domain-Driven Design (DDD) principles on the backend and Next.js / TypeScript on the frontend. Developed both the client-facing corporate portal and the administrative CMS dashboard for Maharah Edara (Riyadh, Saudi Arabia). Engineered 8+ content management modules allowing complete administrative control over consulting services, feasibility studies, projects, articles, team members, partners, and service requests with JWT auth, token refresh, and robust server-side processing.",
+      features: [
+        "Full-Stack Architecture: Next.js Frontend seamlessly integrated with ASP.NET Core DDD Web APIs",
+        "Comprehensive Administrative CMS Dashboard with 100% Real-Time Content Control",
+        "8+ Dedicated Management Modules (Services, Feasibility Studies, Projects, Articles, Team, Partners, Requests)",
+        "Domain-Driven Design (DDD) & Clean Architecture for high scalability and modular domain boundaries",
+        "Bilingual Architecture with Arabic (RTL) Default & English (LTR) Localization",
+        "Reusable UI System: Dynamic DataTables, FormWrappers, and TipTap Rich-Text Editor",
+        "JWT Authentication with Silent Token Refresh, Session Auto-Logout & Role Route Guards",
+        "Zod Schema Validation Integrated with React Hook Form for Type-Safe Forms",
+        "Server-Side Pagination, Instant Filter Searches, and Fast Content Invalidation",
+        "Interactive Service Request & Consultation Booking Workflow with Validation"
+      ],
+      architecture: [
+        "ASP.NET Core Web API built with Domain-Driven Design (DDD), Clean Architecture & Repository pattern",
+        "Microsoft SQL Server database with Entity Framework Core ORM and optimized relational indexing",
+        "Next.js App Router with React, TypeScript, and Server-Side Rendering (SSR) for the frontend",
+        "Tailwind CSS custom design system with RTL-first layout tokens and corporate styling",
+        "Zod schema validation paired with React Hook Form for robust type-safe error handling",
+        "TipTap rich-text editing engine with custom extensions for article and study publishing"
+      ],
+      tags: [
+        { name: "ASP.NET Core", color: "blue-text-gradient" },
+        { name: "DDD", color: "green-text-gradient" },
+        { name: "Next.js", color: "pink-text-gradient" },
+        { name: "TypeScript", color: "orange-text-gradient" },
+        { name: "SQL Server", color: "blue-text-gradient" },
+        { name: "TailwindCSS", color: "green-text-gradient" }
+      ],
+      image: maharaedara,
+      source_code_link: "https://github.com",
+      LiveDemo: "https://maharaedara.com/ar/home",
       isPrivate: true,
     },
     {

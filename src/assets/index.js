@@ -52,6 +52,8 @@ import qutoof from './qutoof.png'
 import elbasira from './elbasira.png'
 import abdelhamid from './abdelhamid.png'
 import almanzoor from './almanzoor.png'
+import maharaedara from './maharaedara.png'
+import mediaReef from './mediaReef.png'
 export {
   logo,
   backend,
@@ -106,5 +108,6 @@ qutoof,
 elbasira,
 abdelhamid,
 almanzoor,
-
+maharaedara,
+mediaReef
 };
