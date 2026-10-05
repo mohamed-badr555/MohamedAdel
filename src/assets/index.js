@@ -50,6 +50,8 @@ import Elshams from "./elshams.png"
 import Peg from './company/peg.jpeg'
 import qutoof from './qutoof.png'
 import elbasira from './elbasira.png'
+import abdelhamid from './abdelhamid.png'
+import almanzoor from './almanzoor.png'
 export {
   logo,
   backend,
@@ -101,5 +103,8 @@ Arkan,
 Sadad,
 Elshams,
 qutoof,
-elbasira
+elbasira,
+abdelhamid,
+almanzoor,
+
 };
