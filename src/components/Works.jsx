@@ -4,17 +4,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { styles } from '../styles';
 import { github, liveDemo } from '../assets';
 import { SectionWrapper } from '../hoc';
-import { projects } from '../constants';
-
-const filters = [
-  { key: "all", label: "All" },
-  { key: "frontend", label: "Frontend" },
-  { key: "fullstack", label: "Full Stack" },
-];
+import { getLocalizedProjects } from '../constants';
+import { useTranslation } from 'react-i18next';
 
 const INITIAL_COUNT = 6;
 
-const ProjectCard = ({ id, name, description, tags, image, source_code_link, LiveDemo, isPrivate }) => {
+const ProjectCard = ({ id, name, description, tags, image, source_code_link, LiveDemo, isPrivate, isRtl, t }) => {
   const navigate = useNavigate();
   const projectSlug = id || name.toLowerCase().replace(/\s+/g, '-');
 
@@ -45,23 +40,25 @@ const ProjectCard = ({ id, name, description, tags, image, source_code_link, Liv
           {/* Overlay on hover */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
             <span className="text-white text-xs font-semibold px-3 py-1.5 rounded-full bg-[#915EFF]/90 backdrop-blur-sm flex items-center gap-1.5 shadow-lg">
-              <span>View Full Details</span>
-              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+              <span>{t('works.cards.viewDetails')}</span>
+              <svg className={`w-3.5 h-3.5 ${isRtl ? 'rtl-flip' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
             </span>
           </div>
 
           {/* Action buttons */}
-          <div className="absolute top-3 right-3 flex gap-2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300 z-10">
+          <div className="absolute top-3 ltr:right-3 rtl:left-3 flex gap-2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300 z-10">
             {isPrivate ? (
               <div
                 className="relative w-9 h-9 rounded-full bg-black/70 backdrop-blur-sm flex justify-center items-center cursor-default border border-white/10"
-                title="Private repository"
+                title={t('works.cards.privateRepo')}
                 onClick={(e) => e.stopPropagation()}
               >
                 <img src={github} alt="github" className="w-4 h-4 object-contain opacity-40" />
-                <svg className="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" /></svg>
+                <svg className="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
+                </svg>
               </div>
             ) : (
               <div
@@ -70,7 +67,7 @@ const ProjectCard = ({ id, name, description, tags, image, source_code_link, Liv
                   e.stopPropagation();
                   window.open(source_code_link, '_blank');
                 }}
-                title="View Source Code"
+                title={t('works.cards.sourceCode')}
               >
                 <img src={github} alt="github" className="w-4 h-4 object-contain" />
               </div>
@@ -81,7 +78,7 @@ const ProjectCard = ({ id, name, description, tags, image, source_code_link, Liv
                 e.stopPropagation();
                 window.open(LiveDemo, '_blank');
               }}
-              title="Open Live Demo"
+              title={t('works.cards.liveDemo')}
             >
               <img src={liveDemo} alt="live demo" className="w-4 h-4 object-contain" />
             </div>
@@ -96,13 +93,13 @@ const ProjectCard = ({ id, name, description, tags, image, source_code_link, Liv
             </h3>
           </div>
 
-          <p className="mt-2.5 text-secondary text-[13px] sm:text-[14px] leading-[22px] line-clamp-3">
+          <p className="mt-2.5 text-secondary text-[13px] sm:text-[14px] leading-[24px] line-clamp-3">
             {description}
           </p>
 
-          <div className="flex items-center gap-1.5 mt-3 text-xs font-semibold text-[#915EFF] group-hover:translate-x-1 transition-transform">
-            <span>Explore Case Study & Architecture</span>
-            <span>→</span>
+          <div className={`flex items-center gap-1.5 mt-3 text-xs font-semibold text-[#915EFF] transition-transform ${isRtl ? 'group-hover:-translate-x-1' : 'group-hover:translate-x-1'}`}>
+            <span>{t('works.cards.exploreCaseStudy')}</span>
+            <span>{isRtl ? '←' : '→'}</span>
           </div>
 
           <div className="flex mt-auto pt-4 flex-wrap gap-1.5 border-t border-white/5">
@@ -122,12 +119,23 @@ const ProjectCard = ({ id, name, description, tags, image, source_code_link, Liv
 };
 
 const Works = () => {
+  const { t, i18n } = useTranslation();
+  const currentLang = i18n.language || 'en';
+  const isRtl = currentLang === 'ar';
+  const localizedProjects = getLocalizedProjects(currentLang);
+
   const [activeFilter, setActiveFilter] = useState("all");
   const [showAll, setShowAll] = useState(false);
 
+  const filters = [
+    { key: "all", label: t('works.filters.all') },
+    { key: "frontend", label: t('works.filters.frontend') },
+    { key: "fullstack", label: t('works.filters.fullstack') },
+  ];
+
   const filtered = activeFilter === "all"
-    ? projects
-    : projects.filter((p) => p.category === activeFilter);
+    ? localizedProjects
+    : localizedProjects.filter((p) => p.category === activeFilter);
 
   const visible = showAll ? filtered : filtered.slice(0, INITIAL_COUNT);
   const hasMore = filtered.length > INITIAL_COUNT;
@@ -136,13 +144,12 @@ const Works = () => {
     <div>
       {/* Header */}
       <div>
-        <p className={styles.sectionSubText}>My work</p>
-        <h2 className={styles.sectionHeadText}>Projects.</h2>
+        <p className={styles.sectionSubText}>{t('works.subtitle')}</p>
+        <h2 className={styles.sectionHeadText}>{t('works.title')}</h2>
       </div>
       <div className="w-full flex">
-        <p className="mt-3 text-secondary text-[15px] sm:text-[17px] max-w-3xl leading-[28px] sm:leading-[30px]">
-          Real-world projects showcasing my skills across frontend and full-stack
-          development. Each project includes links to code repositories and live demos.
+        <p className="mt-3 text-secondary text-[15px] sm:text-[17px] max-w-3xl leading-[28px] sm:leading-[32px]">
+          {t('works.description')}
         </p>
       </div>
 
@@ -160,7 +167,7 @@ const Works = () => {
           >
             {f.label}
             {activeFilter === f.key && (
-              <span className="ml-2 text-[11px] bg-white/20 px-2 py-0.5 rounded-full">
+              <span className="ltr:ml-2 rtl:mr-2 text-[11px] bg-white/20 px-2 py-0.5 rounded-full">
                 {filtered.length}
               </span>
             )}
@@ -176,7 +183,12 @@ const Works = () => {
             className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-7 w-full"
           >
             {visible.map((project) => (
-              <ProjectCard key={project.name} {...project} />
+              <ProjectCard 
+                key={project.id || project.name} 
+                {...project} 
+                isRtl={isRtl} 
+                t={t} 
+              />
             ))}
           </motion.div>
         </AnimatePresence>
@@ -189,7 +201,7 @@ const Works = () => {
             onClick={() => setShowAll(!showAll)}
             className="group flex items-center gap-2 px-8 py-3 rounded-full border border-[#915EFF]/40 text-white text-[14px] font-medium hover:bg-[#915EFF]/10 hover:border-[#915EFF] transition-all duration-300"
           >
-            {showAll ? "Show Less" : `Show All Projects (${filtered.length})`}
+            {showAll ? t('works.showLess') : `${t('works.showAll')} (${filtered.length})`}
             <svg
               className={`w-4 h-4 transition-transform duration-300 ${showAll ? "rotate-180" : ""}`}
               fill="none"
