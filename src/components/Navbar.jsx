@@ -42,11 +42,11 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary/95 backdrop-blur-md border-b border-white/5`}>
+    <nav className="px-4 xs:px-6 sm:px-16 w-full flex items-center py-4 xs:py-5 fixed top-0 z-20 bg-primary/95 backdrop-blur-md border-b border-white/5">
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         {/* Brand */}
         <div 
-          className='flex items-center gap-2.5 cursor-pointer group' 
+          className='flex items-center gap-2 xs:gap-2.5 cursor-pointer group shrink-0' 
           onClick={() => {
             setActive("");
             if (location.pathname !== '/') {
@@ -56,8 +56,8 @@ const Navbar = () => {
             }
           }}
         >
-          <img src={logo} alt="logo" className='object-contain w-9 h-9 transition-transform group-hover:scale-105' />
-          <p className='text-white text-[18px] font-bold cursor-pointer group-hover:text-[#915EFF] transition-colors'>
+          <img src={logo} alt="logo" className='object-contain w-8 h-8 xs:w-9 xs:h-9 transition-transform group-hover:scale-105' />
+          <p className='text-white text-[16px] xs:text-[18px] font-bold cursor-pointer group-hover:text-[#915EFF] transition-colors'>
             {t('nav.logoTitle')}
           </p>
         </div>
@@ -121,8 +121,8 @@ const Navbar = () => {
             onClick={() => setToggle(!toggle)}
           />
 
-          <div className={`${!toggle ? 'hidden' : 'flex'} p-6 black-gradient 
-            absolute top-20 right-0 mx-4 my-2 min-w-[200px] z-20 rounded-2xl border border-white/10 shadow-2xl backdrop-blur-xl`}>
+          <div className={`${!toggle ? 'hidden' : 'flex'} p-5 xs:p-6 black-gradient 
+            absolute top-16 xs:top-20 end-0 mx-3 xs:mx-4 my-2 min-w-[180px] xs:min-w-[200px] z-20 rounded-2xl border border-white/10 shadow-2xl backdrop-blur-xl`}>
             <ul className="list-none flex justify-end items-start flex-col gap-4 w-full">
               {localizedNavLinks.map((link) => (
                 <li 

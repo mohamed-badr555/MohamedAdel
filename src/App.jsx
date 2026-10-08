@@ -7,7 +7,7 @@ function App() {
 
   return (
     <BrowserRouter basename={import.meta.env.BASE_URL}>
-      <div className="relative z-0 bg-primary min-h-screen text-white">
+      <div className="relative z-0 bg-primary min-h-screen text-white overflow-x-hidden w-full">
         <Routes>
           <Route
             path="/"
@@ -38,7 +38,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label={t('whatsapp.ariaLabel')}
-          className="fixed ltr:left-4 rtl:right-4 bottom-4 sm:ltr:left-6 sm:rtl:right-6 sm:bottom-6 z-50 group"
+          className="fixed start-4 bottom-4 sm:start-6 sm:bottom-6 z-50 group"
         >
           <div className="relative flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#25D366] shadow-lg shadow-[#25D366]/30 hover:shadow-xl hover:shadow-[#25D366]/40 hover:scale-110 transition-all duration-300">
             {/* Pulse ring */}
